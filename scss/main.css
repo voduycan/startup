@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 24px; }
+
+header #collapsibleNavId {
+  background: white;
+  padding: 1em;
+  z-index: 500; }
+header .navbar {
+  height: 4.3em; }
+  @media only screen and (min-width: 1600px) {
+    header .navbar {
+      width: 70%;
+      margin: 0 auto; } }
+  header .navbar a .logo {
+    margin-left: 5.5em; }
+    @media only screen and (max-width: 1024px) {
+      header .navbar a .logo {
+        margin-left: 0.5em; } }
+  header .navbar div.collapse ul li .form-inline .input-group {
+    width: 100%; }
+    @media only screen and (min-width: 1024px) {
+      header .navbar div.collapse ul li .form-inline .input-group {
+        width: 17em; } }
+    header .navbar div.collapse ul li .form-inline .input-group span {
+      border: 1px solid #F4333D;
+      border-right: none;
+      background: white;
+      border-bottom-left-radius: 3em;
+      border-top-left-radius: 3em;
+      height: 3.6em;
+      padding-left: 40%; }
+      @media only screen and (max-width: 768px) {
+        header .navbar div.collapse ul li .form-inline .input-group span {
+          padding-left: 15%;
+          height: 2.6em; } }
+      header .navbar div.collapse ul li .form-inline .input-group span i {
+        font-size: 16px;
+        color: #383838;
+        padding: 0.5em; }
+    header .navbar div.collapse ul li .form-inline .input-group input {
+      border: 1px solid #F4333D;
+      border-left: none;
+      padding-left: 0;
+      font-size: 16px;
+      padding-top: 0;
+      border-bottom-right-radius: 3em;
+      border-top-right-radius: 3em; }
+      header .navbar div.collapse ul li .form-inline .input-group input:focus {
+        box-shadow: none; }
+  header .navbar div.collapse ul li a {
+    font-size: 16px; }
+    @media only screen and (max-width: 768px) and (min-width: 767px) {
+      header .navbar div.collapse ul li a {
+        padding-left: 0;
+        font-size: 12px; } }
+    header .navbar div.collapse ul li a img {
+      height: 1.7em;
+      width: 1.7em;
+      margin-left: 1em; }
+      @media only screen and (max-width: 768px) {
+        header .navbar div.collapse ul li a img {
+          margin-left: 0; } }
+  header .navbar div.collapse ul li button {
+    margin-left: 1em;
+    height: 3em;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0.5em 1.7em;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    background: #F4333D;
+    border-radius: 2em; }
+    @media only screen and (max-width: 768px) {
+      header .navbar div.collapse ul li button {
+        margin-left: 0; } }
+  header .navbar div.collapse ul .menu-item {
+    margin-top: 0.15em; }
+  header .navbar div.collapse ul .img-btn {
+    text-align: left;
+    padding: 0;
+    padding-left: 1em; }
+
+.section-panel {
+  position: relative;
+  opacity: 0.7;
+  height: 30em;
+  width: 100%;
+  background-image: url("../img/png/architectural.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 320px) {
+    .section-panel {
+      height: 7em; } }
+  @media only screen and (max-width: 375px) and (min-width: 319px) {
+    .section-panel {
+      height: 9em; } }
+  @media only screen and (max-width: 414px) and (min-width: 374px) {
+    .section-panel {
+      height: 10em; } }
+  @media only screen and (max-width: 768px) and (min-width: 413px) {
+    .section-panel {
+      height: 18em; } }
+  @media only screen and (max-width: 1024px) and (min-width: 767px) {
+    .section-panel {
+      height: 24em; } }
+  .section-panel .panel-left {
+    padding-left: 5em;
+    padding-top: 15%; }
+    .section-panel .panel-left .panel-title {
+      color: white;
+      font-size: 60px;
+      line-height: 1.2em; }
+      .section-panel .panel-left .panel-title span {
+        color: #F4333D; }
+    @media only screen and (min-width: 1200px) {
+      .section-panel .panel-left {
+        padding-top: 10%; } }
+    @media only screen and (max-width: 991px) {
+      .section-panel .panel-left {
+        padding-left: 3em; } }
+    @media only screen and (max-width: 1024px) {
+      .section-panel .panel-left {
+        padding-left: 4em;
+        padding-top: 8%; } }
+    @media only screen and (max-width: 768px) {
+      .section-panel .panel-left {
+        padding-left: 3em;
+        padding-top: 14%; } }
+    @media only screen and (max-width: 414px) {
+      .section-panel .panel-left {
+        padding-left: 1em;
+        padding-top: 20%; }
+        .section-panel .panel-left .panel-title {
+          font-size: 1.5em; }
+        .section-panel .panel-left p {
+          font-size: 24px; } }
+    @media only screen and (max-width: 375px) {
+      .section-panel .panel-left {
+        padding-top: 8%; }
+        .section-panel .panel-left .panel-title {
+          font-size: 1em; }
+        .section-panel .panel-left p {
+          font-size: 16px; } }
+    .section-panel .panel-left p {
+      color: white;
+      width: 80%;
+      margin-top: 16px; }
+      @media only screen and (max-width: 991px) {
+        .section-panel .panel-left p {
+          width: 100%; } }
+  .section-panel .browse {
+    height: 4em;
+    padding-top: 1em;
+    background: wheat;
+    width: 85%;
+    position: absolute;
+    bottom: -2em;
+    left: 7.5%; }
+    .section-panel .browse select {
+      font-size: 0.8em;
+      width: 80%; }
+
+/*# sourceMappingURL=main.css.map */

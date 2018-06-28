@@ -1,0 +1,209 @@
+@import "variable";
+body{
+    margin: 0; padding: 0;
+    font-size: 24px;
+}
+header{
+
+    #collapsibleNavId{
+        background: white;
+        padding: 1em;
+        z-index: 500;
+    }
+    .navbar{
+        @media only screen and (min-width: 1600px){
+            width: 70%;
+            margin: 0 auto;
+        }
+        height: 4.3em;
+        a{
+            .logo{
+                margin-left: 5.5em;
+                @media only screen and (max-width: 1024px) {
+                    margin-left: 0.5em;
+                }
+            }
+        }
+        div.collapse{
+            ul{
+                li{
+                    .form-inline{
+                        .input-group{
+                            width: 100%;
+                            @media only screen and (min-width: 1024px) {
+                                width: 17em;
+                            }
+                            span{
+                                @media only screen and (max-width: 768px) {
+                                    padding-left: 15%;
+                                    height: 2.6em;
+                                }
+                                border: 1px solid $color-red;
+                                border-right: none;
+                                background: white;
+                                border-bottom-left-radius: 3em;
+                                border-top-left-radius: 3em;
+                                height: 3.6em;
+                                padding-left: 40%;
+                                i{
+                                    font-size: 16px;
+                                    color: $color-383838;
+                                    padding: 0.5em;
+                                }
+                            }
+                            input{
+                                border: 1px solid $color-red;
+                                border-left: none;
+                                padding-left: 0;
+                                font-size: 16px;
+                                padding-top: 0;
+                                border-bottom-right-radius: 3em;
+                                border-top-right-radius: 3em;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    a{
+                        @media only screen and (max-width: 768px) and (min-width: 767px) {
+                            padding-left: 0;
+                            font-size: 12px;
+                        }
+
+                        font-size: 16px;
+                        img{
+                            height: 1.7em;
+                            width: 1.7em;
+                            margin-left: 1em;
+                            @media only screen and (max-width: 768px) {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    
+                    button{
+                        @media only screen and (max-width: 768px) {
+                            margin-left: 0;
+                        }
+                        margin-left: 1em;
+                        height: 3em;
+                        font-size: 14px;
+                        line-height: 16px;
+                        padding: 0.5em 1.7em;
+                        color: $color-white;
+                        text-transform: uppercase;
+                        border: none;
+                        background: $color-red;
+                        border-radius: 2em;
+                    }
+                }
+                .menu-item{
+                    margin-top: 0.15em;
+                }
+                .img-btn{
+                    text-align: left;
+                    padding: 0;
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+}
+
+//panel
+.section-panel{
+    @media only screen and (max-width: 320px){
+        height: 7em;
+    }
+    @media only screen and (max-width: 375px) and (min-width: 319px){
+        height: 9em;
+    }
+    @media only screen and (max-width: 414px) and (min-width: 374px){
+        height: 10em;
+    }
+    @media only screen and (max-width: 768px) and (min-width: 413px){
+        height: 18em;
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 767px){
+        height: 24em;
+    }
+    position: relative;
+    opacity: 0.7;
+    height: 30em;
+    width: 100%;
+    background-image: url('../img/png/architectural.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .panel-left{
+        padding-left: 5em;
+        padding-top: 15%;
+
+        .panel-title{
+            color: $color-white;
+            font-size: $size-lg;
+            line-height: 1.2em;
+
+            span{
+                color: $color-red;
+            }
+        }
+        @media only screen and (min-width: 1200px) {
+            padding-top: 10%;
+        }
+        @media only screen and (max-width: 991px) {
+            padding-left: 3em;
+        }
+        @media only screen and (max-width: 1024px) {
+            padding-left: 4em;
+            padding-top: 8%;
+        }
+        @media only screen and (max-width: 768px) {
+            padding-left: 3em;
+            padding-top: 14%;
+        }
+        
+        @media only screen and (max-width: 414px) {
+            padding-left: 1em;
+            padding-top: 20%;
+            .panel-title{
+                font-size: 1.5em;
+            }
+            p{
+                font-size: 24px;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+            padding-top: 8%;
+            .panel-title{
+                font-size: 1em;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        p{
+            color: $color-white;
+            width: 80%;
+            margin-top: 16px;
+            @media only screen and (max-width: 991px) {
+                width: 100%;
+            }
+        }
+    }
+    .browse{
+        height: 4em;
+        padding-top: 1em;
+        background: wheat;
+        width: 85%;
+        position: absolute;
+        bottom: -2em;
+        left: 7.5%;
+        select{
+            font-size: 0.8em;
+            width: 80%;
+        }
+    }
+}
