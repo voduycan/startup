@@ -11,18 +11,18 @@ header .navbar {
   height: 4.3em; }
   @media only screen and (min-width: 1600px) {
     header .navbar {
-      width: 70%;
-      margin: 0 auto; } }
+      width: 70% !important;
+      margin: 0 auto !important; } }
   header .navbar a .logo {
     margin-left: 5.5em; }
     @media only screen and (max-width: 1024px) {
       header .navbar a .logo {
-        margin-left: 0.5em; } }
+        margin-left: 0.5em !important; } }
   header .navbar div.collapse ul li .form-inline .input-group {
     width: 100%; }
     @media only screen and (min-width: 1024px) {
       header .navbar div.collapse ul li .form-inline .input-group {
-        width: 17em; } }
+        width: 17em !important; } }
     header .navbar div.collapse ul li .form-inline .input-group span {
       border: 1px solid #F4333D;
       border-right: none;
@@ -33,16 +33,16 @@ header .navbar {
       padding-left: 40%; }
       @media only screen and (max-width: 768px) {
         header .navbar div.collapse ul li .form-inline .input-group span {
-          padding-left: 15%;
-          height: 2.6em; } }
+          padding-left: 15% !important;
+          height: 2.6em !important; } }
       header .navbar div.collapse ul li .form-inline .input-group span i {
         font-size: 16px;
         color: #383838;
         padding: 0.5em; }
     header .navbar div.collapse ul li .form-inline .input-group input {
+      padding-left: 0.5em;
       border: 1px solid #F4333D;
       border-left: none;
-      padding-left: 0;
       font-size: 16px;
       padding-top: 0;
       border-bottom-right-radius: 3em;
@@ -53,15 +53,15 @@ header .navbar {
     font-size: 16px; }
     @media only screen and (max-width: 768px) and (min-width: 767px) {
       header .navbar div.collapse ul li a {
-        padding-left: 0;
-        font-size: 12px; } }
+        padding-left: 0 !important;
+        font-size: 12px !important; } }
     header .navbar div.collapse ul li a img {
       height: 1.7em;
       width: 1.7em;
       margin-left: 1em; }
       @media only screen and (max-width: 768px) {
         header .navbar div.collapse ul li a img {
-          margin-left: 0; } }
+          margin-left: 0 !important; } }
   header .navbar div.collapse ul li button {
     margin-left: 1em;
     height: 3em;
@@ -75,7 +75,9 @@ header .navbar {
     border-radius: 2em; }
     @media only screen and (max-width: 768px) {
       header .navbar div.collapse ul li button {
-        margin-left: 0; } }
+        margin-left: 0 !important; } }
+    header .navbar div.collapse ul li button:focus {
+      outline: 0; }
   header .navbar div.collapse ul .menu-item {
     margin-top: 0.15em; }
   header .navbar div.collapse ul .img-btn {
@@ -92,21 +94,29 @@ header .navbar {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
+  .section-panel .bg-op {
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    opacity: 0.7; }
+  .section-panel .row {
+    position: relative;
+    top: -100%; }
   @media only screen and (max-width: 320px) {
     .section-panel {
-      height: 7em; } }
+      height: 7em !important; } }
   @media only screen and (max-width: 375px) and (min-width: 319px) {
     .section-panel {
-      height: 9em; } }
+      height: 9em !important; } }
   @media only screen and (max-width: 414px) and (min-width: 374px) {
     .section-panel {
-      height: 10em; } }
+      height: 10em !important; } }
   @media only screen and (max-width: 768px) and (min-width: 413px) {
     .section-panel {
-      height: 18em; } }
+      height: 18em !important; } }
   @media only screen and (max-width: 1024px) and (min-width: 767px) {
     .section-panel {
-      height: 24em; } }
+      height: 24em !important; } }
   .section-panel .panel-left {
     padding-left: 5em;
     padding-top: 15%; }
@@ -118,29 +128,29 @@ header .navbar {
         color: #F4333D; }
     @media only screen and (min-width: 1200px) {
       .section-panel .panel-left {
-        padding-top: 10%; } }
+        padding-top: 10% !important; } }
     @media only screen and (max-width: 991px) {
       .section-panel .panel-left {
-        padding-left: 3em; } }
+        padding-left: 3em !important; } }
     @media only screen and (max-width: 1024px) {
       .section-panel .panel-left {
-        padding-left: 4em;
-        padding-top: 8%; } }
+        padding-left: 4em !important;
+        padding-top: 8% !important; } }
     @media only screen and (max-width: 768px) {
       .section-panel .panel-left {
-        padding-left: 3em;
-        padding-top: 14%; } }
+        padding-left: 3em !important;
+        padding-top: 14% !important; } }
     @media only screen and (max-width: 414px) {
       .section-panel .panel-left {
-        padding-left: 1em;
-        padding-top: 20%; }
+        padding-left: 1.5em !important;
+        padding-top: 20% !important; }
         .section-panel .panel-left .panel-title {
-          font-size: 1.5em; }
+          font-size: 1.5em !important; }
         .section-panel .panel-left p {
-          font-size: 24px; } }
+          font-size: 24px !important; } }
     @media only screen and (max-width: 375px) {
       .section-panel .panel-left {
-        padding-top: 8%; }
+        padding-top: 8% !important; }
         .section-panel .panel-left .panel-title {
           font-size: 1em; }
         .section-panel .panel-left p {
@@ -151,7 +161,7 @@ header .navbar {
       margin-top: 16px; }
       @media only screen and (max-width: 991px) {
         .section-panel .panel-left p {
-          width: 100%; } }
+          width: 100% !important; } }
   .section-panel .browse {
     height: 4em;
     padding-top: 1em;
@@ -163,5 +173,204 @@ header .navbar {
     .section-panel .browse select {
       font-size: 0.8em;
       width: 80%; }
+
+.birdging .row {
+  margin: 0; }
+.birdging .build {
+  text-align: right !important; }
+  @media only screen and (max-width: 1024px) {
+    .birdging .build {
+      padding-right: 2em !important; } }
+  @media only screen and (max-width: 768px) {
+    .birdging .build {
+      padding-right: 1em !important; } }
+.birdging .birdging-left {
+  padding: 3em;
+  text-align: left; }
+  @media only screen and (max-width: 1024px) {
+    .birdging .birdging-left {
+      padding: 1em; }
+      .birdging .birdging-left .join {
+        margin-top: 3em !important; } }
+  @media only screen and (max-width: 768px) {
+    .birdging .birdging-left {
+      padding: 1em !important; }
+      .birdging .birdging-left h1 {
+        font-size: 1em; }
+      .birdging .birdging-left p {
+        font-size: 0.8em; }
+      .birdging .birdging-left .join {
+        margin-top: 2em !important; } }
+  @media only screen and (max-width: 414px) {
+    .birdging .birdging-left {
+      padding: 1em; }
+      .birdging .birdging-left .join {
+        margin-top: 1em !important; } }
+  .birdging .birdging-left h1 {
+    line-height: 1.2em;
+    margin-bottom: 1em;
+    font-weight: 700; }
+  .birdging .birdging-left p {
+    line-height: 1.35em; }
+  .birdging .birdging-left .join {
+    margin-top: 7em;
+    width: 18em;
+    height: 3em;
+    background: red;
+    border-radius: 2em;
+    color: white;
+    text-transform: uppercase; }
+    .birdging .birdging-left .join img {
+      width: 30px;
+      height: auto;
+      padding-bottom: 0.5em;
+      margin-left: 1em; }
+.birdging .birdging-right {
+  padding: 0; }
+  .birdging .birdging-right img {
+    width: 100%;
+    height: auto; }
+
+.tech {
+  width: 100%; }
+  .tech .row-tech {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+    @media only screen and (max-width: 1024px) {
+      .tech .row-tech .tech-left {
+        padding-left: 1em !important; }
+      .tech .row-tech .tech-between {
+        padding-left: 1em !important; }
+      .tech .row-tech .tech-right .claim {
+        font-size: 0.8em !important; } }
+    .tech .row-tech .tech-left {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      line-height: 0.8em;
+      border-right: 1px solid #F4333D;
+      padding-left: 3em;
+      text-align: center; }
+      .tech .row-tech .tech-left span {
+        font-size: 20px;
+        color: #808080;
+        letter-spacing: -0.5px;
+        line-height: 6px; }
+      .tech .row-tech .tech-left h1 {
+        font-size: 58px;
+        line-height: 1em;
+        color: #F4333D; }
+      .tech .row-tech .tech-left p {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 0;
+        color: #383838;
+        text-transform: uppercase; }
+    .tech .row-tech .tech-between {
+      padding-top: 1em;
+      padding-bottom: 1em; }
+      @media only screen and (max-width: 414px) {
+        .tech .row-tech .tech-between {
+          padding-left: 1.5em !important; } }
+      .tech .row-tech .tech-between p {
+        font-weight: 600;
+        font-size: 1em;
+        line-height: 28px;
+        color: #383838; }
+      .tech .row-tech .tech-between small {
+        font-size: 16px;
+        line-height: 24px; }
+    .tech .row-tech .tech-right .claim {
+      font-size: 1em;
+      text-transform: uppercase;
+      text-align: left;
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      background: #F4333D;
+      color: white; }
+      @media only screen and (max-width: 414px) {
+        .tech .row-tech .tech-right .claim {
+          padding-left: 1em !important; } }
+      .tech .row-tech .tech-right .claim .row-claim .claim-right img {
+        padding-top: 1em;
+        padding-left: 1em; }
+
+.landscape {
+  margin-bottom: 2em;
+  padding: 1em; }
+  .landscape h1 {
+    margin-top: 1em;
+    font-size: 60px;
+    font-weight: 800;
+    color: #F4333D; }
+    .landscape h1 span {
+      color: #383838; }
+  .landscape h5 {
+    text-transform: uppercase;
+    color: #4A4A4A;
+    margin-top: 1em; }
+  .landscape img {
+    width: 80%;
+    height: auto;
+    margin-top: 4em; }
+
+.sector {
+  padding: 3em; }
+  @media only screen and (max-width: 768px) {
+    .sector {
+      padding: 1em !important; } }
+  .sector h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1em; }
+  .sector .sector-btn {
+    text-align: left; }
+    .sector .sector-btn button {
+      background: white;
+      border: 1px solid #F4333D;
+      margin-right: 0.5em;
+      margin-bottom: 1em; }
+    .sector .sector-btn .btn-active {
+      background: #F4333D;
+      color: white; }
+
+.round {
+  padding: 2.5em;
+  background: #231F20; }
+  .round h2 {
+    color: white; }
+    .round h2 span {
+      color: #F4333D; }
+  .round .row-out .list-box .row-in {
+    background: white;
+    margin: 1em 0.1em; }
+    .round .row-out .list-box .row-in .box-left {
+      border-right: 1px solid #F4333D;
+      padding: 0;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 0.4em; }
+      .round .row-out .list-box .row-in .box-left p {
+        text-transform: uppercase;
+        margin: 0;
+        color: #808080;
+        font-size: 24px;
+        line-height: 28px; }
+    .round .row-out .list-box .row-in .box-between {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em; }
+      .round .row-out .list-box .row-in .box-between p {
+        font-size: 20px;
+        line-height: 23px;
+        color: #F4333D; }
+      .round .row-out .list-box .row-in .box-between small {
+        display: block;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 16px;
+        color: #383838; }
+    .round .row-out .list-box .row-in .box-right {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em; }
 
 /*# sourceMappingURL=main.css.map */
