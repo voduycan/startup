@@ -12,3 +12,25 @@
         margin-left: 1em;
     }
 }
+
+@mixin claim-btn {
+    @media only screen and (max-width: 414px) {
+        padding-left: 1em !important;
+    }
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    background: $color-red;
+    color: $color-white;
+    .row-claim{
+        .claim-right{
+            img{
+                padding-top: 1em;
+                padding-left: 1em;
+            }
+        }
+    }
+}

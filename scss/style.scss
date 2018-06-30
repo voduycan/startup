@@ -6,30 +6,55 @@ body{
     //font-family: Arial, Helvetica, sans-serif;
 }
 header{
-
+    height: 104px;
+    @media only screen and (max-width: 767px) {
+        height: 44px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 0.5em;
+    }
     #collapsibleNavId{
         background: white;
-        padding: 1em;
         z-index: 500;
     }
     .navbar{
-        @media only screen and (min-width: 1600px){
-            width: 70% !important;
-            margin: 0 auto !important;
+        width: 100%;
+        justify-content: center;
+        @media only screen and (max-width: 767px) {
+            justify-content: space-between;
+            height: 44px;
+            padding: 0;
         }
-        height: 4.3em;
+
         a{
             .logo{
-                margin-left: 5.5em;
+                margin-left: 0.5em;
                 @media only screen and (max-width: 1024px) {
                     margin-left: 0.5em !important;
                 }
+                @media only screen and (max-width: 767px) {
+                    width: 4em !important;
+                }
+
+            }
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none;
+            .navbar-toggler-icon{
+                background-image: url('../img/svg/Vector.svg');
+                height: 1em;
             }
         }
         div.collapse{
+            flex-grow: 0;
             ul{
+                text-align: right;
                 li{
                     .form-inline{
+                        @media only screen and (max-width: 767px) {
+                           display: none;
+                        }
                         .input-group{
                             width: 100%;
                             @media only screen and (min-width: 1024px) {
@@ -77,18 +102,14 @@ header{
                         img{
                             height: 1.7em;
                             width: 1.7em;
-                            margin-left: 1em;
-                            @media only screen and (max-width: 768px) {
-                                margin-left: 0 !important;
-                            }
                         }
                     }
                     
                     button{
                         @media only screen and (max-width: 768px) {
-                            margin-left: 0 !important;
+                            padding: 0.5em 1em !important;
+                            font-size: 13px;
                         }
-                        margin-left: 1em;
                         height: 3em;
                         font-size: 14px;
                         line-height: 16px;
@@ -103,13 +124,37 @@ header{
                         }
                     }
                 }
+                .menu-row{
+                    @media only screen and (max-width: 767px) {
+                        padding: 0 !important;
+                    }                    
+                }
                 .menu-item{
                     margin-top: 0.15em;
+                    a{
+                        font-weight: 600;
+                        color: $color-4a4a4a;
+                    }
                 }
-                .img-btn{
-                    text-align: left;
+                .img-btn-row{
                     padding: 0;
-                    padding-left: 1em;
+                    .img-btn{
+                    
+                        @media only screen and (max-width: 767px) {
+                            a{
+                                display: none;
+                            }
+                            button{
+                                background: none;
+                                color: $color-red;
+                                font-weight: 600;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                    .img-btn-btn{
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -123,10 +168,14 @@ header{
         height: 100%;
         width: 100%;
         opacity: 0.7;
+        background-image: url('../img/png/architectural.png');
+        z-index: -1;
+        position: absolute;
     }
     .row{
         position: relative;
-        top: -100%;
+        //top: -100%;
+        z-index: 1;
     }
     @media only screen and (max-width: 320px){
         height: 7em !important;
@@ -144,10 +193,8 @@ header{
         height: 24em !important;
     }
     position: relative;
-    opacity: 0.7;
     height: 30em;
     width: 100%;
-    background-image: url('../img/png/architectural.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -209,16 +256,83 @@ header{
         }
     }
     .browse{
-        height: 4em;
-        padding-top: 1em;
-        background: wheat;
+        color: $color-footer;
+        height: 112px;
+        background: $color-white;
         width: 85%;
         position: absolute;
         bottom: -2em;
         left: 7.5%;
+        box-shadow: 0px 0px 4px #888888;
         select{
             font-size: 0.8em;
-            width: 80%;
+            width: 80%; 
+        }
+        .browse-looking{
+            color: $color-footer;
+            padding-top: 1.5em;
+        }
+        .borwse-investor{
+            color: $color-footer;
+            padding-top: 1.5em;
+        }
+        .browse-funding{
+            padding: 0;
+            position: relative;
+            color: $color-footer;
+            padding-top: 1.5em;
+            span{
+                position: absolute;
+            }
+            form{
+                display: inline-block;
+                margin-left: 45px;
+            }
+        }
+        .browse-btn{
+            padding: 0;
+           .claim{
+            @include claim-btn;
+            font-size: 20px !important;
+            .claim-right{
+                img{
+                    padding-top: 0 !important;
+                    padding-left: 0 !important;
+                }
+            }
+           }
+        }
+        .select-box{
+            width: 165px;
+            overflow: hidden;
+            border-bottom: 1px solid $color-red;
+            position: relative;
+        }
+        .select-box:after{
+            width: 0; 
+            height: 0; 
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            // border-top: 6px solid #f00;
+            position: absolute;
+            top: 25%;
+            right: -10px;
+            content: ">";
+            z-index: 98;
+            transform: rotate(90deg);
+            color: red;
+         }
+        .select-box select{
+            width: 165px;
+            border: 0;
+            position: relative;
+            z-index: 99;
+            background: none;    
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            &::-ms-expand {
+                display: none;
+            }
         }
     }
 }
@@ -266,11 +380,13 @@ header{
             }
         }
         h1{
+            color: $color-383838;
             line-height: 1.2em;
             margin-bottom: 1em;
             font-weight: 700;
         }
         p{
+            color: $color-383838;
             line-height: 1.35em;
         }
         .join{
@@ -355,25 +471,7 @@ header{
         }
         .tech-right{
             .claim{
-                @media only screen and (max-width: 414px) {
-                    padding-left: 1em !important;
-                }
-                font-size: 1em;
-                text-transform: uppercase;
-                text-align: left;
-                height: 100%;
-                width: 100%;
-                border-radius: 0;
-                background: $color-red;
-                color: $color-white;
-                .row-claim{
-                    .claim-right{
-                        img{
-                            padding-top: 1em;
-                            padding-left: 1em;
-                        }
-                    }
-                }
+                @include claim-btn;
             }
         }
     }
