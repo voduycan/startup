@@ -5,7 +5,7 @@ body{
     margin: 0; 
     margin: 0 auto;
     padding: 0;
-    font-size: 24px;
+    font-size: $size-24;
     //font-family: Arial, Helvetica, sans-serif;
 }
 header{
@@ -79,7 +79,7 @@ header{
                                 height: 3.6em;
                                 padding-left: 40%;
                                 i{
-                                    font-size: 16px;
+                                    font-size: $size-16;
                                     color: $color-383838;
                                     padding: 0.5em;
                                 }
@@ -88,7 +88,7 @@ header{
                                 padding-left: 0.5em;
                                 border: 1px solid $color-red;
                                 border-left: none;
-                                font-size: 16px;
+                                font-size: $size-16;
                                 padding-top: 0;
                                 border-bottom-right-radius: 3em;
                                 border-top-right-radius: 3em;
@@ -102,10 +102,10 @@ header{
                     a{
                         @media only screen and (max-width: 768px) and (min-width: 767px) {
                             padding-left: 0 !important;
-                            font-size: 12px !important;
+                            font-size: $size-12 !important;
                         }
 
-                        font-size: 16px;
+                        font-size: $size-16;
                         img{
                             height: 1.7em;
                             width: 1.7em;
@@ -115,10 +115,10 @@ header{
                     button{
                         @media only screen and (max-width: 768px) {
                             padding: 0.5em 1em !important;
-                            font-size: 13px;
+                            font-size: $size-13;
                         }
                         height: 3em;
-                        font-size: 14px;
+                        font-size: $size-14;
                         line-height: 16px;
                         padding: 0.5em 1.7em;
                         color: $color-white;
@@ -262,7 +262,7 @@ header{
             }
             .p-body{
                 display: none;
-                font-size: 16px;
+                font-size: $size-16;
             }
         }
         p{
@@ -279,10 +279,10 @@ header{
         bottom: 2.5em;
         left: 3em;
         color: white;
-        font-size: 24px;
+        font-size: $size-24;
         line-height: 28px;
         @media only screen and (max-width: 575px) {
-            font-size: 12px;
+            font-size: $size-12;
             line-height: 14px;
             bottom: 19em;
         }
@@ -300,15 +300,15 @@ header{
             height: auto;
             left: 8.5%;
             bottom: 4em;
-            font-size: 16px;
+            font-size: $size-16;
             .browse-looking{
                 padding-left: 2em;
             }
-            .borwse-investor{
-                padding-top: 1em !important;
+            .browse-investor{
+                padding-top: 1.5em !important;
                 padding-left: 0 !important;
                 form{
-                    width: 70px !important;
+                    width: 80px !important;
                 }
             }
             .browse-funding{
@@ -319,7 +319,7 @@ header{
                 height: 56px;
                 .claim{
                     .claim-left{
-                        font-size: 14px;
+                        font-size: $size-14;
                         line-height: 16px;
                         padding-top: 0.5em;
                         padding-left: 2em;
@@ -383,7 +383,7 @@ header{
             padding: 0;
            .claim{
             @include claim-btn;
-            font-size: 20px !important;
+            font-size: $size-20 !important;
             .claim-right{
                 img{
                     padding-top: 0 !important;
@@ -419,6 +419,7 @@ header{
             @media only screen and (max-width:1023px) {
                 width: 150px !important;
             }
+            
             width: 165px;
             border: 0;
             position: relative;
@@ -428,6 +429,11 @@ header{
             -moz-appearance: none;
             &::-ms-expand {
                 display: none;
+            }
+        }
+        .select-box .select-investor{
+            @media only screen and (max-width: 575px) {
+                width: 80px !important;
             }
         }
     }
@@ -504,7 +510,7 @@ header{
             line-height: 1.35em;
             margin: 0;
             @media only screen and (max-width: 375px) {
-                font-size: 14px;
+                font-size: $size-14;
                 line-height: 24px;
             }
         }
@@ -520,7 +526,7 @@ header{
                 color: $color-red;
             }
             @media only screen and (max-width: 375px) {
-                font-size: 14px !important;
+                font-size: $size-14 !important;
                 line-height: 16px !important;
             }
             
@@ -562,25 +568,25 @@ header{
             .tech-left{
                 text-align: left !important;
                 span{
-                    font-size: 12px !important;
+                    font-size: $size-12 !important;
                     line-height: 16px !important;
                 }
                 h1{
-                    font-size: 36px !important;
+                    font-size: $size-36 !important;
                     line-height: 40px !important;
                 }
                 p{
-                    font-size: 14px !important;
+                    font-size: $size-14 !important;
                     line-height: 16px !important;
                 }
             }
             .tech-between{
                 p{
-                    font-size: 16px !important;
+                    font-size: $size-16 !important;
                     line-height: 19px !important;
                 }
                 h6{
-                    font-size: 12px !important;
+                    font-size: $size-12 !important;
                     line-height: 16px !important;
                 }
             }
@@ -598,7 +604,7 @@ header{
             border-right: 1px solid $color-red; 
             text-align: left;
             span{
-                font-size: 20px;
+                font-size: $size-20;
                 color: $color-808080;
                 letter-spacing: -0.5px;
                 line-height: 6px;
@@ -611,12 +617,12 @@ header{
 
             }
             h1{
-                font-size: 58px;
+                font-size: $size-58;
                 line-height: 1em;
                 color: $color-red;
             }
             p{
-                font-size: 20px;
+                font-size: $size-20;
                 line-height: 23px;
                 margin-bottom: 0;
                 color: $color-383838;
@@ -650,7 +656,7 @@ header{
                 @media only screen and (max-width: 575px) {
                     text-align: center;
                     .claim-left{
-                        font-size: 14px;
+                        font-size: $size-14;
                         line-height: 16px;
                         padding-top: 0.5em;
                     }
@@ -684,12 +690,12 @@ header{
     margin-bottom: 2em;
     h1{
         @media only screen and (max-width: 414px) {
-            font-size: 32px;
+            font-size: $size-32;
             line-height: 27px;
             margin-bottom: 1em;
         }
         margin-top: 1em;
-        font-size: 60px;
+        font-size: $size-lg;
         font-weight: 800;
         color: $color-red;
         span{
@@ -698,7 +704,7 @@ header{
     }
     h5{
         @media only screen and (max-width: 414px) {
-            font-size: 14px;
+            font-size: $size-14;
             line-height: 16px;
         }
         text-transform: uppercase;
@@ -728,7 +734,7 @@ header{
     }
     @media only screen and (max-width: 414px){
             h2{
-                font-size: 32px !important;
+                font-size: $size-32 !important;
                 line-height: 40px !important;
                 .br-sector{
                     display: block !important;
@@ -736,7 +742,7 @@ header{
             }
     }
     h2{
-        font-size: 40px;
+        font-size: $size-40;
         font-weight: 700;
         margin-bottom: 1em;
         .br-sector{
@@ -756,7 +762,7 @@ header{
                 color: $color-white;
             }
             @media only screen and (max-width: 414px) {
-                font-size: 12px;
+                font-size: $size-12;
                 line-height: 14px;
                 margin-right: 0;
                 margin-bottom: 0;
@@ -783,9 +789,9 @@ header{
         color: $color-white;
         text-align: center;
         margin-bottom: 1em;
-        font-size: 40px;
+        font-size: $size-40;
         @media only screen and (max-width: 414px) {
-            font-size: 32px;
+            font-size: $size-32;
             line-height: 47px;
             text-align: left;
             margin-bottom: 0.5em;
@@ -821,7 +827,7 @@ header{
                         text-transform: uppercase;
                         margin: 0;
                         color: $color-808080;
-                        font-size: 24px;
+                        font-size: $size-24;
                         line-height: 28px;
                     }
                 }
@@ -829,13 +835,13 @@ header{
                     padding-top: 0.5em;
                     padding-bottom: 0.5em;
                     p{
-                        font-size: 20px;
+                        font-size: $size-20;
                         line-height: 23px;
                         color: $color-red;
                     }
                     small{
                         display: block;
-                        font-size: 16px;
+                        font-size: $size-16;
                         line-height: 19px;
                         margin-top: 16px;
                         color: $color-383838;
@@ -863,13 +869,13 @@ header{
     padding-top: 5em;
     h2{
         @media only screen and (max-width: 414px) {
-            font-size: 32px;
+            font-size: $size-32;
             line-height: 67px;
             text-align: left;
             padding-left: 1em;
         }
         color: $color-white;
-        font-size: 40px;
+        font-size: $size-40;
         line-height: 67px;
         text-transform: uppercase;
         margin-bottom: 0.8em;
@@ -908,7 +914,7 @@ footer{
     padding-top: 1em;
     h3{
         color: $color-white;
-        font-size: 14px;
+        font-size: $size-14;
         line-height: 16px;
         margin-bottom: 1em;
         text-transform: uppercase;
@@ -916,7 +922,7 @@ footer{
     ul{
         list-style-type: none;
         padding-left: 0;
-        font-size: 12px;
+        font-size: $size-12;
         color: $color-979797;
         li{
             margin-bottom: 0.5em;
@@ -941,7 +947,7 @@ footer{
     }
     .copy-right{
         width: 100%;
-        font-size: 10px;
+        font-size: $size-10;
         line-height: 16px;
         padding-bottom: 1em;
         .cp-r-row{
@@ -972,7 +978,7 @@ footer{
             .cp-r-2{
                 p{
                     color: $color-808080;
-                    text-align: left;
+                    text-align: center;
                     margin: 0;
                     @media only screen and (max-width: 575px) {
                        text-align: center;

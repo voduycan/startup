@@ -245,11 +245,11 @@ header {
         font-size: 16px; }
         .section-panel .browse .browse-looking {
           padding-left: 2em; }
-        .section-panel .browse .borwse-investor {
-          padding-top: 1em !important;
+        .section-panel .browse .browse-investor {
+          padding-top: 1.5em !important;
           padding-left: 0 !important; }
-          .section-panel .browse .borwse-investor form {
-            width: 70px !important; }
+          .section-panel .browse .browse-investor form {
+            width: 80px !important; }
         .section-panel .browse .browse-funding {
           padding: 1em;
           padding-left: 2em !important; }
@@ -347,6 +347,9 @@ header {
           width: 150px !important; } }
       .section-panel .browse .select-box select::-ms-expand {
         display: none; }
+    @media only screen and (max-width: 575px) {
+      .section-panel .browse .select-box .select-investor {
+        width: 80px !important; } }
 
 .birdging .row {
   margin: 0; }
@@ -802,7 +805,7 @@ footer {
           color: #A7A9AC; }
       footer .copy-right .cp-r-row .cp-r-2 p {
         color: #808080;
-        text-align: left;
+        text-align: center;
         margin: 0; }
         @media only screen and (max-width: 575px) {
           footer .copy-right .cp-r-row .cp-r-2 p {
