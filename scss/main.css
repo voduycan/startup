@@ -168,7 +168,7 @@ header {
     .section-panel {
       height: 24em !important; } }
   .section-panel .panel-left {
-    padding-left: 5em;
+    padding-left: 3em;
     padding-top: 15%; }
     .section-panel .panel-left .panel-title {
       color: white;

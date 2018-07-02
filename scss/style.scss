@@ -226,7 +226,7 @@ header{
     background-repeat: no-repeat;
 
     .panel-left{
-        padding-left: 5em;
+        padding-left: 3em;
         padding-top: 15%;
 
         .panel-title{
@@ -643,7 +643,7 @@ header{
         }
         .tech-right{
             padding: 0;
-            @media only screen and (max-width: 575px) {;
+            @media only screen and (max-width: 575px) {
                 margin-left: -1em;
             }
             .claim{
