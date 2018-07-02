@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             
             <ul class="navbar-nav mt-2 mt-lg-0 row">
-                <li class="nav-item col-md-4">
+                <li class="nav-item col-md-4 nav-form">
                     <form class="form-inline my-2 my-lg-0">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -57,7 +57,7 @@
                         <a href=""><img class="user-img" src="./img/png/User Profile.png" alt=""></a>
                     </li>
                     <li class="nav-item col-sm-12 col-md-6 img-btn img-btn-btn">
-                        <button class="sign-up">sign up</button>
+                        <button type="button" class="sign-up">sign up</button>
                     </li>
                 </div>
             </ul>
@@ -70,20 +70,21 @@
        <div class="bg-op">
             
        </div>
-        <div class="row">
+        <div class="row row-panel">
             <div class="col-12 col-sm-12 col-lg-7 panel-left">
                     <h2 class="panel-title">
                         Be a part of the next wave of <span>unicorns.</span>
                     </h2>
-                    <p>It doesn’t matter if you’re a startup, investor, incubator or accelerator. We’ll help you discover the opportunities that await you.</p>
-                    <p class="p-bottom">Find opportunities based on your preferences </p>
+                    <p class="p-body">It doesn’t matter if you’re a startup, investor, incubator or accelerator. We’ll help you discover the opportunities that await you.</p>
+                    
             </div>
         </div>
+        <p class="p-bottom">Find opportunities based on your preferences </p>
         <div class="browse row">
-            <div class="col-6 col-sm-3 browse-looking">
+            <div class="col-4 col-sm-3 browse-looking">
                 I am a looking for
             </div>
-            <div class="col-6 col-sm-3 borwse-investor">
+            <div class="col-5 col-sm-2 borwse-investor">
                 <form class="select-box">
                     <select>
                         <option selected>investors</option>
@@ -93,7 +94,7 @@
                     </select>
                 </form>
             </div>
-            <div class="col-12 col-sm-3 browse-funding">
+            <div class="col-12 col-sm-4 browse-funding">
                 <span>in</span>
                 <form class="select-box">
                     <select>
@@ -122,7 +123,7 @@
                 <p>Finding the right people to talk to while juggling other responsibilities is tough. We recognise your efforts. We’re here to make it easier by understanding your profile and recommending you opportunities. </p>
                 <button class="join btn">join the community <img src="./img/svg/tail-right.svg" alt=""></button>
             </div>
-            <div class="col-12 col-sm-6 birdging-right"><img src="./img/png/right_image.png" alt=""></div>
+            <div class="col-12 col-sm-6 birdging-right"><img class="img-none" src="./img/png/right_image.png" alt=""></div>
         </div>
     </section>
     <section class="birdging">
@@ -137,19 +138,19 @@
     </section>
     <section class="tech">
         <div class="row row-tech">
-            <div class="col-12 col-sm-3 tech-left">
-                <span>Since 01 Jun 2018</span>
+            <div class="col-4 col-sm-3 tech-left">
+                <span>Since <br class="br-tech"> 01 Jun 2018</span>
                 <h1>3,000 </h1>
                 <p>Tech Startups</p>
             </div>
-            <div class="col-12 col-sm-6 tech-between">
+            <div class="col-8 col-sm-6 tech-between">
                 <p>Is your tech company or multiplier ACRA-registered?</p>
-                <small>We understand how busy you are. If your tech company has been registered on ACRA, your profile should have been automatically ported over to our network.</small>
+                <h6>We understand how busy you are. If your tech company has been registered on ACRA, your profile should have been automatically ported over to our network.</h6>
             </div>
             <div class="col-12 col-sm-3 tech-right">
                 <button class="btn claim">
                     <div class="row row-claim ">
-                        <div class="col-8 col-sm-12 col-xl-8 claim-left">claim<br>company profile</div>
+                        <div class="col-8 col-sm-12 col-xl-8 claim-left">claim <br class="br-claim">company profile</div>
                         <div class="col-4 col-sm-12 col-xl-4 claim-right"><img src="./img/svg/tail-right.svg" alt=""></div>
                     </div>
                 </button>
@@ -159,10 +160,11 @@
     <section class="landscape text-center">
         <h1>Investment <span>landscape</span></h1>
         <h5>Most investments since 1 Jan 2018</h5>
-        <img src="./img/png/Investment Landscape_illustrartion.png" alt="">
+        <img class="img-desktop" src="./img/png/Investment Landscape_illustrartion.png" alt="">
+        <img class="img-mobile" src="./img/png/Group.png" alt="">
     </section>
     <section class="sector">
-        <h2>Browse Industry Sectors</h2>
+        <h2>Browse <br class="br-sector"> Industry Sectors</h2>
         <div class="sector-btn">
             <button class="btn">Advertising Tech</button>
             <button class="btn">Comunication</button>
@@ -194,7 +196,7 @@
     </section>
 
     <section class="round">
-        <h2>Latest <span>Investment</span> Rounds</h2>
+        <h2>Latest <br> <span>Investment</span> Rounds</h2>
         <div class="row row-out">
             <div class="col-12 col-sm-6 col-xl-4 list-box">
                 <div class="row row-in">
@@ -318,25 +320,33 @@
                     <li>Contact Us</li>
                 </ul>
             </div>
-            <div class="col-6 col-sm-3 footer-end">
-                <img src="./img/svg/logo-footer.svg" alt="">
-                <ul>
-                    <li>Main Office & Reception</li>
-                    <li>#01-02 South Tower, Solaris,</li>
-                    <li>1 Fusionopolis Walk</li>
-                    <li>Singapore 138628</li>
-                    <br>
-                    <li>Tel: +65 6898 1800</li>
-                    <li>Fax: +65 6276 9606</li>
-                </ul>
+            <div class="col-12 col-sm-3 footer-end row">
+                <div class="col-6 col-sm-12"><img src="./img/svg/logo-footer.svg" alt=""></div>
+                <div class="col-6 col-sm-12">
+                    <ul>
+                        <li>Main Office & Reception</li>
+                        <li>#01-02 South Tower, Solaris,</li>
+                        <li>1 Fusionopolis Walk</li>
+                        <li>Singapore 138628</li>
+                        <br>
+                        <li>Tel: +65 6898 1800</li>
+                        <li>Fax: +65 6276 9606</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="copy-right">
             <div class="row cp-r-row">
-                <div class="col-12 col-sm-4 cp-r-1">
-                    <button><a href="">About</a></button>
-                    <button><a href="">Policy</a></button>
-                    <button><a href="">Terms of Use</a></button>
+                <div class="col-12 col-sm-4 cp-r-1 row">
+                    <div class=" col-4 col-sm-3 cp-r-btn text-center">
+                        <button><a href="">About</a></button>
+                    </div>
+                    <div class=" col-4 col-sm-3 cp-r-btn text-center">
+                        <button><a href="">Policy</a></button>
+                    </div>
+                    <div class=" col-4 col-sm-6 text-center cp-r-term"> 
+                        <button><a href="">Terms of Use</a></button>
+                    </div>
                 </div>
                 <div class="col-12 col-sm-4 cp-r-2">
                     <p>All rights reserved © 2018 StartupSG Network</p>

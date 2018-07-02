@@ -14,8 +14,8 @@
 }
 
 @mixin claim-btn {
-    @media only screen and (max-width: 414px) {
-        padding-left: 1em !important;
+    &:hover{
+        background: $color-red-hover;
     }
     font-size: 1em;
     text-transform: uppercase;
@@ -26,6 +26,13 @@
     background: $color-red;
     color: $color-white;
     .row-claim{
+        .claim-left{
+            .br-claim{
+                @media only screen and (max-width: 575px) {
+                    display: none;
+                }
+            }
+        }
         .claim-right{
             img{
                 padding-top: 1em;

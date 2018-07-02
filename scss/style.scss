@@ -1,7 +1,10 @@
 @import "variable";
 @import "mixin";
 body{
-    margin: 0; padding: 0;
+    max-width: 1440px;
+    margin: 0; 
+    margin: 0 auto;
+    padding: 0;
     font-size: 24px;
     //font-family: Arial, Helvetica, sans-serif;
 }
@@ -46,10 +49,13 @@ header{
                 height: 1em;
             }
         }
-        div.collapse{
+        #collapsibleNavId{
             flex-grow: 0;
             ul{
                 text-align: right;
+                .nav-form{
+                    padding-right: 0;
+                }
                 li{
                     .form-inline{
                         @media only screen and (max-width: 767px) {
@@ -92,6 +98,7 @@ header{
                             }
                         }
                     }
+                    
                     a{
                         @media only screen and (max-width: 768px) and (min-width: 767px) {
                             padding-left: 0 !important;
@@ -122,6 +129,11 @@ header{
                         &:focus{
                             outline: 0;
                         }
+                        &:hover{
+                            background: $color-white;
+                            border: 1px solid $color-red;
+                            color: $color-red;
+                        }
                     }
                 }
                 .menu-row{
@@ -131,6 +143,11 @@ header{
                 }
                 .menu-item{
                     margin-top: 0.15em;
+                    &:hover{
+                        a{
+                            color: $color-red;
+                        }
+                    }
                     a{
                         font-weight: 600;
                         color: $color-4a4a4a;
@@ -163,32 +180,41 @@ header{
 
 //panel
 .section-panel{
+    @media only screen  and (max-width:414px){
+       
+        height: 574px !important;
+        .bg-op{
+            height: 100%;
+           
+        }
+        .borwse{
+            width: 90%;
+            left: 7.5%;
+            bottom: 3em;
+        }
+    }
     .bg-op{
         background: $color-black-07;
         height: 100%;
         width: 100%;
         opacity: 0.7;
         background-image: url('../img/png/architectural.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        @media only screen and (max-width: 575px) {
+            background-image: url('../img/png/Image.png') !important;
+        }
         z-index: -1;
         position: absolute;
     }
-    .row{
+    .row-panel{
         position: relative;
         //top: -100%;
         z-index: 1;
+        margin: 0;
     }
-    @media only screen and (max-width: 320px){
-        height: 7em !important;
-    }
-    @media only screen and (max-width: 375px) and (min-width: 319px){
-        height: 9em !important;
-    }
-    @media only screen and (max-width: 414px) and (min-width: 374px){
-        height: 10em !important;
-    }
-    @media only screen and (max-width: 768px) and (min-width: 413px){
-        height: 18em !important;
-    }
+    
     @media only screen and (max-width: 1024px) and (min-width: 767px){
         height: 24em !important;
     }
@@ -216,33 +242,26 @@ header{
             padding-top: 10% !important;
         }
         @media only screen and (max-width: 991px) {
-            padding-left: 3em !important;
+            padding-left: 1em !important;
         }
         @media only screen and (max-width: 1024px) {
-            padding-left: 4em !important;
+            padding-left: 1em !important;
             padding-top: 8% !important;
         }
         @media only screen and (max-width: 768px) {
-            padding-left: 3em !important;
+            padding-left: 1em !important;
             padding-top: 14% !important;
         }
-        
         @media only screen and (max-width: 414px) {
-            padding-left: 1.5em !important;
-            padding-top: 20% !important;
+            padding-top: 0 !important;
+            padding-left: 2em !important;
             .panel-title{
-                font-size: 1.5em !important;
+                padding-top: 4em !important;
+                font-size: 36px !important;
+                width: 80%;
             }
-            p{
-                font-size: 24px !important;
-            }
-        }
-        @media only screen and (max-width: 375px) {
-            padding-top: 8% !important;
-            .panel-title{
-                font-size: 1em;
-            }
-            p{
+            .p-body{
+                display: none;
                 font-size: 16px;
             }
         }
@@ -255,15 +274,83 @@ header{
             }
         }
     }
+    .p-bottom{
+        position: absolute;
+        bottom: 2.5em;
+        left: 3em;
+        color: white;
+        font-size: 24px;
+        line-height: 28px;
+        @media only screen and (max-width: 575px) {
+            font-size: 12px;
+            line-height: 14px;
+            bottom: 19em;
+        }
+        @media only screen and (max-width: 1024px) {
+            left: 1.5em;
+        }
+        @media only screen and (max-width: 320px) {
+            bottom: 21em;
+
+        }
+    }
     .browse{
+        
+        @media only screen and (max-width: 575px) {
+            height: auto;
+            left: 8.5%;
+            bottom: 4em;
+            font-size: 16px;
+            .browse-looking{
+                padding-left: 2em;
+            }
+            .borwse-investor{
+                padding-top: 1em !important;
+                padding-left: 0 !important;
+                form{
+                    width: 70px !important;
+                }
+            }
+            .browse-funding{
+                padding: 1em;
+                padding-left: 2em !important;
+            }
+            .browse-btn{
+                height: 56px;
+                .claim{
+                    .claim-left{
+                        font-size: 14px;
+                        line-height: 16px;
+                        padding-top: 0.5em;
+                        padding-left: 2em;
+                        .br-claim{
+                            display: none;
+                        }
+                    }
+                    .claim-right{
+                        img{
+                            margin-top: -0.5em;
+                            margin-left: -1em;
+                            width: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            width: calc(100% - 2em);
+            left: 1em;
+        }
         color: $color-footer;
         height: 112px;
         background: $color-white;
-        width: 85%;
+        width: calc(100% - 6em);
+        left: 3em;
+        margin: 0 auto;
         position: absolute;
         bottom: -2em;
-        left: 7.5%;
         box-shadow: 0px 0px 4px #888888;
+        z-index: 100;
         select{
             font-size: 0.8em;
             width: 80%; 
@@ -277,7 +364,7 @@ header{
             padding-top: 1.5em;
         }
         .browse-funding{
-            padding: 0;
+            padding-left: 2.5em;
             position: relative;
             color: $color-footer;
             padding-top: 1.5em;
@@ -287,6 +374,9 @@ header{
             form{
                 display: inline-block;
                 margin-left: 45px;
+                select{
+                    color: $color-a7a9ac;
+                }
             }
         }
         .browse-btn{
@@ -303,6 +393,9 @@ header{
            }
         }
         .select-box{
+            @media only screen and (max-width:1023px) {
+                width: 145px !important;
+            }
             width: 165px;
             overflow: hidden;
             border-bottom: 1px solid $color-red;
@@ -323,6 +416,9 @@ header{
             color: red;
          }
         .select-box select{
+            @media only screen and (max-width:1023px) {
+                width: 150px !important;
+            }
             width: 165px;
             border: 0;
             position: relative;
@@ -344,6 +440,9 @@ header{
     }
     .build{
         text-align: right !important;
+        @media only screen and (min-width: 1000px) {
+            padding-top: 5em !important;
+        }
         @media only screen and (max-width: 1024px) {
             padding-right: 2em !important;
         }
@@ -352,19 +451,27 @@ header{
         }
     }
     .birdging-left{
+        @media only screen and (min-width: 1366px) {
+            padding-top: 7em;
+        }
+        @media only screen and (max-width: 1200px) {
+            padding-right: 1em !important;
+        }
         padding: 3em;
         padding-bottom: 0;
         text-align: left;
         @media only screen and (max-width: 1024px) {
             padding: 1em;
+            padding-top: 2em;
             .join{
-                margin-top: 3em !important;
+                margin-top: 2em !important;
             }
         }
         @media only screen and (max-width: 768px) {
             padding: 1em !important;
             h1{
                 font-size: 1em;
+                padding-top: 2em;
             }
             p{
                 font-size: 0.8em
@@ -384,17 +491,38 @@ header{
             line-height: 1.2em;
             margin-bottom: 1em;
             font-weight: 700;
+            @media only screen and(max-width: 1024px) {
+                margin-bottom: 0.5em;
+            }
+            @media only screen and (max-width: 375px) {
+                font-size: 32px;
+                line-height: 40px;
+            }
         }
         p{
             color: $color-383838;
             line-height: 1.35em;
+            margin: 0;
+            @media only screen and (max-width: 375px) {
+                font-size: 14px;
+                line-height: 24px;
+            }
         }
         .join{
             @media only screen and (max-width: 1365px) {
                 margin-top: 1em !important;
             }
-            margin-top: 7em;
+            margin-top: 2em;
             @include join-btn;
+            &:hover{
+                background: $color-white;
+                border: 1px solid $color-red;
+                color: $color-red;
+            }
+            @media only screen and (max-width: 375px) {
+                font-size: 14px !important;
+                line-height: 16px !important;
+            }
             
         }
     }
@@ -404,6 +532,11 @@ header{
             width: 100%;
             height: auto;
         }
+        .img-none{
+            @media only screen and (max-width:414px) {
+                display: none;
+            }
+        }
     }
 }
 
@@ -411,14 +544,45 @@ header{
 .tech{
     width: 100%;
     .row-tech{
+        margin: 0;
+        padding-left: 3em;
+        @media only screen and (max-width: 1024px) {
+            padding-left: 1em;
+        }
         border-top: 1px solid $color-black-008;
         border-bottom: 1px solid $color-black-008;
         @media only screen and (max-width: 1024px) {
+            .tech-right{
+                .claim{
+                    font-size: 0.8em !important;
+                }
+            }
+        }
+        @media only screen and (max-width: 414px) {
             .tech-left{
-                padding-left: 1em !important;
+                text-align: left !important;
+                span{
+                    font-size: 12px !important;
+                    line-height: 16px !important;
+                }
+                h1{
+                    font-size: 36px !important;
+                    line-height: 40px !important;
+                }
+                p{
+                    font-size: 14px !important;
+                    line-height: 16px !important;
+                }
             }
             .tech-between{
-                padding-left: 1em !important;
+                p{
+                    font-size: 16px !important;
+                    line-height: 19px !important;
+                }
+                h6{
+                    font-size: 12px !important;
+                    line-height: 16px !important;
+                }
             }
             .tech-right{
                 .claim{
@@ -427,17 +591,24 @@ header{
             }
         }
         .tech-left{
+            padding-left: 0;
             margin-top: 1em;
             margin-bottom: 1em;
             line-height: 0.8em;
             border-right: 1px solid $color-red; 
-            padding-left: 3em;
-            text-align: center;
+            text-align: left;
             span{
                 font-size: 20px;
                 color: $color-808080;
                 letter-spacing: -0.5px;
                 line-height: 6px;
+                .br-tech{
+                    display: none;
+                    @media only screen and (max-width: 414px){
+                        display: inline-block;
+                    }
+                }
+
             }
             h1{
                 font-size: 58px;
@@ -453,25 +624,57 @@ header{
             }
         }
         .tech-between{
-            @media only screen and (max-width: 414px) {
-                padding-left: 1.5em !important;
-            }
             padding-top: 1em;
             padding-bottom: 1em;
+            @media only screen and (max-width: 575px) {
+                padding-right: 1em;
+            }
             p{
                 font-weight: 600;
                 font-size: 1em;
                 line-height: 28px;
                 color:  $color-383838;
             }
-            small{
+            h6{
                 font-size: $size-16;
                 line-height: 24px;
+                color: $color-383838;
             }
         }
         .tech-right{
+            padding: 0;
+            @media only screen and (max-width: 575px) {;
+                margin-left: -1em;
+            }
             .claim{
+                @media only screen and (max-width: 575px) {
+                    text-align: center;
+                    .claim-left{
+                        font-size: 14px;
+                        line-height: 16px;
+                        padding-top: 0.5em;
+                    }
+                }
+                @media only screen and (max-width: 375px) {
+                    text-align: center;
+                }
                 @include claim-btn;
+                .claim-left{
+                    @media only screen and (max-width: 879px) {
+                        word-wrap: break-word;
+                        word-break: break-word;
+                        white-space: normal;
+                    }
+                }
+                .claim-right{
+                    img{
+                        @media only screen and (max-width: 575px) {
+                            margin-top: -1.5em;
+                            margin-left: -1em;
+                            width: 2.5em;
+                        }
+                    }
+                }
             }
         }
     }
@@ -479,8 +682,12 @@ header{
 
 .landscape{
     margin-bottom: 2em;
-    padding: 1em;
     h1{
+        @media only screen and (max-width: 414px) {
+            font-size: 32px;
+            line-height: 27px;
+            margin-bottom: 1em;
+        }
         margin-top: 1em;
         font-size: 60px;
         font-weight: 800;
@@ -490,26 +697,51 @@ header{
         }
     }
     h5{
+        @media only screen and (max-width: 414px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
         text-transform: uppercase;
         color: $color-4a4a4a;
         margin-top: 1em;
     }
-    img{
+    .img-desktop{
         width: 80%;
         height: auto;
         margin-top: 4em;
+        @media only screen and(max-width: 414px) {
+            display: none;
+        }
+    }
+    .img-mobile{
+        display: none;
+        @media only screen and(max-width: 414px) {
+            display: block;
+        }
     }
 }
 
 .sector{
     padding: 3em;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
         padding: 1em !important;
+    }
+    @media only screen and (max-width: 414px){
+            h2{
+                font-size: 32px !important;
+                line-height: 40px !important;
+                .br-sector{
+                    display: block !important;
+                }
+            }
     }
     h2{
         font-size: 40px;
         font-weight: 700;
         margin-bottom: 1em;
+        .br-sector{
+            display: none;
+        }
     }
     .sector-btn{
         text-align: left;
@@ -518,6 +750,17 @@ header{
             border: 1px solid $color-red;
             margin-right: 0.5em;
             margin-bottom: 1em;
+            &:hover{
+                background: $color-red;
+                border: 1px solid $color-red;
+                color: $color-white;
+            }
+            @media only screen and (max-width: 414px) {
+                font-size: 12px;
+                line-height: 14px;
+                margin-right: 0;
+                margin-bottom: 0;
+            }
         }
         .btn-active{
             background: $color-red;
@@ -529,17 +772,30 @@ header{
 //round
 
 .round {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
         padding: 1em;
+        padding-top: 2em;
     }
     
-    padding: 2.5em;
+    padding: 3em;
     background: $color-round;
     h2{
         color: $color-white;
         text-align: center;
         margin-bottom: 1em;
         font-size: 40px;
+        @media only screen and (max-width: 414px) {
+            font-size: 32px;
+            line-height: 47px;
+            text-align: left;
+            margin-bottom: 0.5em;
+            br{
+                display: block !important;
+            }
+        }
+        br{
+            display: none;
+        }
         span{
             color: $color-red;
         }
@@ -606,6 +862,12 @@ header{
     padding-bottom: 5em;
     padding-top: 5em;
     h2{
+        @media only screen and (max-width: 414px) {
+            font-size: 32px;
+            line-height: 67px;
+            text-align: left;
+            padding-left: 1em;
+        }
         color: $color-white;
         font-size: 40px;
         line-height: 67px;
@@ -617,11 +879,29 @@ header{
     }
     button{
         @include join-btn;
+        &:hover{
+            background: $color-white;
+            border: 1px solid $color-red;
+            color: $color-red;
+        }
+        @media only screen and (max-width: 414px) {
+            margin-left: -4em;
+        }
+        @media only screen and (max-width: 375px) {
+            margin-left: -2em;
+        }
     }
 }
 
 //footer
 footer{
+    .row{
+        margin: 0;
+    }
+    @media only screen and (max-width: 1024px) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
     padding-left: 3em;
     padding-right: 3em;
     background: $color-footer;
@@ -643,9 +923,11 @@ footer{
         }
     }
     .footer-end{
+        padding-right: 0;
         img{
             width: 90%;
             height: auto;
+            margin-bottom: 1em;
         }
         text-align: right;
         @media only screen and (max-width: 575px) {
@@ -661,20 +943,26 @@ footer{
         width: 100%;
         font-size: 10px;
         line-height: 16px;
+        padding-bottom: 1em;
         .cp-r-row{
             border-top: 1px solid $color-border-cp-r;
             padding-top: 1em;
             .cp-r-1{
+                .cp-r-btn{
+                    
+                    border-right: 1px solid $color-808080;
+                   
+                }
+                
                 button{
                     padding: 0;
                     line-height: 0.5em;
                     border: 0;
                     background: none;
-                    border-right: 1px solid $color-808080;
-                    padding-right: 1em;
-                    margin-right: 1em;
-                    &:last-of-type{
-                        border-right:0;
+                  
+                    
+                    @media only screen and (max-width: 575px) {
+                        text-transform: uppercase;
                     }
                     a{
                         color: $color-copy-right;
@@ -686,12 +974,18 @@ footer{
                     color: $color-808080;
                     text-align: left;
                     margin: 0;
+                    @media only screen and (max-width: 575px) {
+                       text-align: center;
+                       margin-top: 2em;
+                    }
                 }
             }
             .cp-r-3{
                 p{
                     @media only screen and (max-width: 575px) {
-                        text-align: left;
+                        text-align: center;
+                        margin-top: 1em;
+                        margin-bottom: 1em;
                     }
                     text-align: right;
                     color: $color-white;
