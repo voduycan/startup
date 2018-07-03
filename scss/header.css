@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color-red".
-        on line 67 of C:\DC\startup\scss\header.scss
+        on line 70 of C:\DC\startup\scss\header.scss
 
-62:                             span{
-63:                                 @media only screen and (max-width: 768px) {
-64:                                     padding-left: 15% !important;
-65:                                     height: 2.6em !important;
-66:                                 }
-67:                                 border: 1px solid $color-red;
-68:                                 border-right: none;
-69:                                 background: white;
-70:                                 border-bottom-left-radius: 3em;
-71:                                 border-top-left-radius: 3em;
-72:                                 height: 50px;
+65:                             span{
+66:                                 @media only screen and (max-width: 768px) {
+67:                                     padding-left: 15% !important;
+68:                                     height: 2.6em !important;
+69:                                 }
+70:                                 border: 1px solid $color-red;
+71:                                 border-right: none;
+72:                                 background: white;
+73:                                 border-bottom-left-radius: 3em;
+74:                                 border-top-left-radius: 3em;
+75:                                 height: 50px;
 
 Backtrace:
-C:\DC\startup\scss\header.scss:67
+C:\DC\startup\scss\header.scss:70
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -143,4 +143,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-red\".\A         on line 67 of C:\DC\startup\scss\header.scss\A \A 62:                             span{\A 63:                                 @media only screen and (max-width: 768px) {\A 64:                                     padding-left: 15% !important;\A 65:                                     height: 2.6em !important;\A 66:                                 }\A 67:                                 border: 1px solid $color-red;\A 68:                                 border-right: none;\A 69:                                 background: white;\A 70:                                 border-bottom-left-radius: 3em;\A 71:                                 border-top-left-radius: 3em;\A 72:                                 height: 50px;"; }
+  content: "Error: Undefined variable: \"$color-red\".\A         on line 70 of C:\DC\startup\scss\header.scss\A \A 65:                             span{\A 66:                                 @media only screen and (max-width: 768px) {\A 67:                                     padding-left: 15% !important;\A 68:                                     height: 2.6em !important;\A 69:                                 }\A 70:                                 border: 1px solid $color-red;\A 71:                                 border-right: none;\A 72:                                 background: white;\A 73:                                 border-bottom-left-radius: 3em;\A 74:                                 border-top-left-radius: 3em;\A 75:                                 height: 50px;"; }

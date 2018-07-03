@@ -74,11 +74,14 @@ header {
         text-align: right; }
         header .navbar #collapsibleNavId ul .nav-form {
           padding-right: 0; }
+          @media only screen and (max-width: 768px) {
+            header .navbar #collapsibleNavId ul .nav-form {
+              margin-top: -5px !important; } }
         @media only screen and (max-width: 767px) {
           header .navbar #collapsibleNavId ul li .form-inline {
             display: none; } }
         header .navbar #collapsibleNavId ul li .form-inline .input-group {
-          height: 50px;
+          height: 100%;
           width: 100%; }
           @media only screen and (min-width: 1024px) {
             header .navbar #collapsibleNavId ul li .form-inline .input-group {
@@ -104,7 +107,6 @@ header {
             border: 1px solid #F4333D;
             border-left: none;
             font-size: 16px;
-            padding-top: 0;
             border-bottom-right-radius: 3em;
             border-top-right-radius: 3em; }
             header .navbar #collapsibleNavId ul li .form-inline .input-group input:focus {
@@ -131,7 +133,7 @@ header {
           @media only screen and (max-width: 768px) {
             header .navbar #collapsibleNavId ul li button {
               padding: 0.5em 1em !important;
-              font-size: 13px; } }
+              font-size: 12px; } }
           header .navbar #collapsibleNavId ul li button:focus {
             outline: 0; }
           @media only screen and (min-width: 768px) {
@@ -210,6 +212,12 @@ footer {
       padding-top: 1em; }
       footer .copy-right .cp-r-row .cp-r-1 .cp-r-btn {
         border-right: 1px solid #808080; }
+      @media only screen and (max-width: 375px) {
+        footer .copy-right .cp-r-row .cp-r-1 .cp-r-term {
+          padding-right: 0; } }
+      @media only screen and (max-width: 320px) {
+        footer .copy-right .cp-r-row .cp-r-1 .cp-r-term {
+          padding: 0; } }
       footer .copy-right .cp-r-row .cp-r-1 button {
         padding: 0;
         line-height: 0.5em;
@@ -220,14 +228,16 @@ footer {
             text-transform: uppercase; } }
         footer .copy-right .cp-r-row .cp-r-1 button a {
           color: #A7A9AC; }
-      footer .copy-right .cp-r-row .cp-r-2 p {
-        color: #808080;
-        text-align: center;
-        margin: 0; }
-        @media only screen and (max-width: 575px) {
-          footer .copy-right .cp-r-row .cp-r-2 p {
-            text-align: center;
-            margin-top: 2em; } }
+      footer .copy-right .cp-r-row .cp-r-2 {
+        padding: 0; }
+        footer .copy-right .cp-r-row .cp-r-2 p {
+          color: #808080;
+          text-align: center;
+          margin: 0; }
+          @media only screen and (max-width: 575px) {
+            footer .copy-right .cp-r-row .cp-r-2 p {
+              text-align: center;
+              margin-top: 2em; } }
       footer .copy-right .cp-r-row .cp-r-3 p {
         text-align: right;
         color: white;
@@ -372,12 +382,14 @@ body {
         bottom: 4em;
         font-size: 16px; }
         .section-panel .browse .browse-looking {
-          padding-left: 2em; }
+          padding-left: 1.5em; }
         .section-panel .browse .browse-investor {
-          padding-top: 1.5em !important;
+          padding-top: 0.9em !important;
           padding-left: 0 !important; }
           .section-panel .browse .browse-investor form {
             width: 80px !important; }
+            .section-panel .browse .browse-investor form select {
+              width: 100% !important; }
         .section-panel .browse .browse-funding {
           padding: 1em;
           padding-left: 2em !important; }
@@ -399,8 +411,7 @@ body {
         width: calc(100% - 2em);
         left: 1em; } }
     .section-panel .browse select {
-      font-size: 0.8em;
-      width: 80%; }
+      font-size: 0.8em; }
     .section-panel .browse .browse-looking {
       color: #231F20;
       padding-top: 1.5em; }
@@ -410,21 +421,51 @@ body {
     .section-panel .browse .browse-investor {
       color: #231F20;
       padding-top: 1.5em; }
+      @media only screen and (max-width: 375px) {
+        .section-panel .browse .browse-investor {
+          padding-top: 1.5em !important; } }
+      .section-panel .browse .browse-investor form select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: #A7A9AC;
+        background-image: url("../img/svg/Shape.svg");
+        background-size: 12px;
+        background-position: calc(100% - 5px) center;
+        background-repeat: no-repeat;
+        border: none;
+        border-bottom: 1px solid red;
+        width: 120%;
+        outline: 0; }
     .section-panel .browse .browse-funding {
       padding-left: 2.5em;
       position: relative;
       color: #231F20;
       padding-top: 1.5em; }
+      @media only screen and (max-width: 768px) {
+        .section-panel .browse .browse-funding {
+          padding-left: 1.5em !important; } }
       .section-panel .browse .browse-funding span {
         position: absolute; }
       .section-panel .browse .browse-funding form {
         display: inline-block;
         margin-left: 45px; }
-        @media only screen and (max-width: 768px) and (min-width: 415px) {
-          .section-panel .browse .browse-funding form {
-            margin-left: 30px !important; } }
         .section-panel .browse .browse-funding form select {
-          color: #A7A9AC; }
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          color: #A7A9AC;
+          background-image: url("../img/svg/Shape.svg");
+          background-size: 12px;
+          background-position: calc(100% - 5px) center;
+          background-repeat: no-repeat;
+          border: none;
+          border-bottom: 1px solid red;
+          width: 140%;
+          outline: 0; }
+          @media only screen and (max-width: 768px) and (min-width: 576px) {
+            .section-panel .browse .browse-funding form select {
+              width: 120% !important; } }
     .section-panel .browse .browse-btn {
       padding: 0; }
       .section-panel .browse .browse-btn .claim {
@@ -440,6 +481,9 @@ body {
         font-size: 20px !important; }
         .section-panel .browse .browse-btn .claim:hover {
           background: #f35e65; }
+        @media only screen and (max-width: 320px) {
+          .section-panel .browse .browse-btn .claim {
+            text-align: center !important; } }
         @media only screen and (max-width: 575px) {
           .section-panel .browse .browse-btn .claim .row-claim .claim-left .br-claim {
             display: none; } }
@@ -449,42 +493,6 @@ body {
         .section-panel .browse .browse-btn .claim .claim-right img {
           padding-top: 0 !important;
           padding-left: 0 !important; }
-    .section-panel .browse .select-box {
-      width: 165px;
-      overflow: hidden;
-      border-bottom: 1px solid #F4333D;
-      position: relative; }
-      @media only screen and (max-width: 1023px) {
-        .section-panel .browse .select-box {
-          width: 145px !important; } }
-    .section-panel .browse .select-box:after {
-      width: 0;
-      height: 0;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      position: absolute;
-      top: 25%;
-      right: -10px;
-      content: ">";
-      z-index: 98;
-      transform: rotate(90deg);
-      color: red; }
-    .section-panel .browse .select-box select {
-      width: 165px;
-      border: 0;
-      position: relative;
-      z-index: 99;
-      background: none;
-      -webkit-appearance: none;
-      -moz-appearance: none; }
-      @media only screen and (max-width: 1023px) {
-        .section-panel .browse .select-box select {
-          width: 150px !important; } }
-      .section-panel .browse .select-box select::-ms-expand {
-        display: none; }
-    @media only screen and (max-width: 575px) {
-      .section-panel .browse .select-box .select-investor {
-        width: 80px !important; } }
 
 .birdging .row {
   margin: 0; }
@@ -692,6 +700,9 @@ body {
             text-align: center; } }
         .tech .row-tech .tech-right .claim:hover {
           background: #f35e65; }
+        @media only screen and (max-width: 320px) {
+          .tech .row-tech .tech-right .claim {
+            text-align: center !important; } }
         @media only screen and (max-width: 575px) {
           .tech .row-tech .tech-right .claim .row-claim .claim-left .br-claim {
             display: none; } }

@@ -23,6 +23,9 @@
     font-size: 1em;
     text-transform: uppercase;
     text-align: left;
+    @media only screen and (max-width: 320px) {
+        text-align: center !important;
+    }
     height: 100%;
     width: 100%;
     border-radius: 0;

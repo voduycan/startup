@@ -46,6 +46,9 @@ header{
             ul{
                 text-align: right;
                 .nav-form{
+                    @media only screen and (max-width: 768px) {
+                        margin-top: -5px !important;
+                    }
                     padding-right: 0;
                 }
                 li{
@@ -54,7 +57,7 @@ header{
                            display: none;
                         }
                         .input-group{
-                            height: 50px;
+                            height: 100%;
                             width: 100%;
                             @media only screen and (min-width: 1024px) {
                                 width: 17em !important;
@@ -82,7 +85,6 @@ header{
                                 border: 1px solid $color-red;
                                 border-left: none;
                                 font-size: $size-16;
-                                padding-top: 0;
                                 border-bottom-right-radius: 3em;
                                 border-top-right-radius: 3em;
                                 &:focus{
@@ -108,7 +110,7 @@ header{
                     button{
                         @media only screen and (max-width: 768px) {
                             padding: 0.5em 1em !important;
-                            font-size: $size-13;
+                            font-size: $size-12;
                         }
                         height: 3em;
                         font-size: $size-14;

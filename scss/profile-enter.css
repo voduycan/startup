@@ -1,0 +1,77 @@
+@font-face {
+  font-family: AvenirLTStd-Black;
+  src: url("../fonts/AvenirLTStd-Black.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-BlackOblique;
+  src: url("../fonts/AvenirLTStd-BlackOblique.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-Book;
+  src: url("../fonts/AvenirLTStd-Book.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-BookOblique;
+  src: url("../fonts/AvenirLTStd-BookOblique.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-Heavy;
+  src: url("../fonts/AvenirLTStd-Heavy.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-HeavyOblique;
+  src: url("../fonts/AvenirLTStd-HeavyOblique.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-Light;
+  src: url("../fonts/AvenirLTStd-Light.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-LightOblique;
+  src: url("../fonts/AvenirLTStd-LightOblique.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-Medium;
+  src: url("../fonts/AvenirLTStd-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-MediumOblique;
+  src: url("../fonts/AvenirLTStd-MediumOblique.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-Oblique;
+  src: url("../fonts/AvenirLTStd-Oblique.otf") format("opentype"); }
+@font-face {
+  font-family: AvenirLTStd-Roman;
+  src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype"); }
+h1, h2, h3 {
+  font-family: AvenirLTStd-Black; }
+
+h4, h5, h6 {
+  font-family: AvenirLTStd-Medium; }
+
+h1 {
+  font-size: 60px;
+  line-height: 64px; }
+
+h2 {
+  font-size: 40px;
+  line-height: 48px; }
+
+h3 {
+  font-size: 36px;
+  line-height: 48px; }
+
+h4 {
+  font-size: 20px;
+  line-height: 24px; }
+
+h5 {
+  font-size: 16px;
+  line-height: 24px; }
+
+h6 {
+  font-size: 14px;
+  line-height: 16px; }
+
+header {
+  width: 42%;
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  background: wheat; }
+  header img {
+    width: 146px;
+    height: auto; }
+
+/*# sourceMappingURL=profile-enter.css.map */

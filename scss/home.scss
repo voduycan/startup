@@ -149,13 +149,16 @@ body{
             bottom: 4em;
             font-size: $size-16;
             .browse-looking{
-                padding-left: 2em;
+                padding-left: 1.5em;
             }
             .browse-investor{
-                padding-top: 1.5em !important;
+                padding-top: 0.9em !important;
                 padding-left: 0 !important;
                 form{
                     width: 80px !important;
+                    select{
+                        width: 100% !important;
+                    }
                 }
             }
             .browse-funding{
@@ -200,7 +203,6 @@ body{
         z-index: 100;
         select{
             font-size: 0.8em;
-            width: 80%; 
         }
         .browse-looking{
             color: $color-footer;
@@ -212,8 +214,30 @@ body{
         .browse-investor{
             color: $color-footer;
             padding-top: 1.5em;
+            @media only screen and (max-width: 375px) {
+                padding-top: 1.5em !important;
+            }
+            form{
+                select{
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    color: $color-a7a9ac;
+                    background-image: url('../img/svg/Shape.svg');
+                    background-size: 12px;
+                    background-position: calc(100% - 5px) center;
+                    background-repeat: no-repeat;
+                    border: none;
+                    border-bottom: 1px solid red;
+                    width: 120%;
+                    outline: 0;
+                }
+            }
         }
         .browse-funding{
+            @media only screen and (max-width: 768px) {
+                padding-left: 1.5em !important;
+            }
             padding-left: 2.5em;
             position: relative;
             color: $color-footer;
@@ -224,11 +248,23 @@ body{
             form{
                 display: inline-block;
                 margin-left: 45px;
-                @media only screen and (max-width: 768px) and (min-width: 415px) {
-                    margin-left: 30px !important;
-                }
+               
                 select{
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
                     color: $color-a7a9ac;
+                    background-image: url('../img/svg/Shape.svg');
+                    background-size: 12px;
+                    background-position: calc(100% - 5px) center;
+                    background-repeat: no-repeat;
+                    border: none;
+                    border-bottom: 1px solid red;
+                    width: 140%;
+                    outline: 0;
+                    @media only screen and (max-width: 768px) and (min-width: 576px){
+                        width: 120% !important;
+                    }
                 }
             }
         }
@@ -245,50 +281,50 @@ body{
             }
            }
         }
-        .select-box{
-            @media only screen and (max-width:1023px) {
-                width: 145px !important;
-            }
-            width: 165px;
-            overflow: hidden;
-            border-bottom: 1px solid $color-red;
-            position: relative;
-        }
-        .select-box:after{
-            width: 0; 
-            height: 0; 
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            // border-top: 6px solid #f00;
-            position: absolute;
-            top: 25%;
-            right: -10px;
-            content: ">";
-            z-index: 98;
-            transform: rotate(90deg);
-            color: red;
-         }
-        .select-box select{
-            @media only screen and (max-width:1023px) {
-                width: 150px !important;
-            }
+        // .select-box{
+        //     @media only screen and (max-width:1023px) {
+        //         width: 145px !important;
+        //     }
+        //     width: 165px;
+        //     overflow: hidden;
+        //     border-bottom: 1px solid $color-red;
+        //     position: relative;
+        // }
+        // .select-box:after{
+        //     width: 0; 
+        //     height: 0; 
+        //     border-left: 6px solid transparent;
+        //     border-right: 6px solid transparent;
+        //     // border-top: 6px solid #f00;
+        //     position: absolute;
+        //     top: 25%;
+        //     right: -10px;
+        //     content: ">";
+        //     z-index: 98;
+        //     transform: rotate(90deg);
+        //     color: red;
+        //  }
+        // .select-box select{
+        //     @media only screen and (max-width:1023px) {
+        //         width: 150px !important;
+        //     }
             
-            width: 165px;
-            border: 0;
-            position: relative;
-            z-index: 99;
-            background: none;    
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            &::-ms-expand {
-                display: none;
-            }
-        }
-        .select-box .select-investor{
-            @media only screen and (max-width: 575px) {
-                width: 80px !important;
-            }
-        }
+        //     width: 165px;
+        //     border: 0;
+        //     position: relative;
+        //     z-index: 99;
+        //     background: none;    
+        //     -webkit-appearance: none;
+        //     -moz-appearance: none;
+        //     &::-ms-expand {
+        //         display: none;
+        //     }
+        // }
+        // .select-box .select-investor{
+        //     @media only screen and (max-width: 575px) {
+        //         width: 80px !important;
+        //     }
+        // }
     }
 }
 
@@ -539,6 +575,7 @@ body{
                     @media only screen and (max-width: 575px) {
                         text-align: left;
                     }
+                    
                     img{
                         @media only screen and (max-width: 575px) {
                             margin-top: -1.5em;

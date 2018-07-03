@@ -60,7 +60,14 @@ footer{
                     border-right: 1px solid $color-808080;
                    
                 }
-                
+                .cp-r-term{
+                    @media only screen and (max-width: 375px) {
+                        padding-right: 0;
+                    }
+                    @media only screen and (max-width: 320px) {
+                        padding: 0;
+                    }
+                }
                 button{
                     padding: 0;
                     line-height: 0.5em;
@@ -77,6 +84,7 @@ footer{
                 }
             }
             .cp-r-2{
+                padding: 0;
                 p{
                     color: $color-808080;
                     text-align: center;
