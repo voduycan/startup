@@ -1,0 +1,172 @@
+//header
+header{
+    font-family: AvenirLTStd-Medium !important;
+    height: 104px;
+    @media only screen and (max-width: 767px) {
+        height: 44px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 0.5em;
+    }
+    #collapsibleNavId{
+        background: white;
+        z-index: 500;
+    }
+    .navbar{
+        width: 100%;
+        justify-content: center;
+        @media only screen and (max-width: 767px) {
+            justify-content: space-between;
+            height: 44px;
+            padding: 0;
+        }
+
+        a{
+            .logo{
+                margin-left: 0.5em;
+                @media only screen and (max-width: 1024px) {
+                    margin-left: 0.5em !important;
+                }
+                @media only screen and (max-width: 767px) {
+                    width: 4em !important;
+                }
+
+            }
+        }
+        .navbar-toggler {
+            border: none;
+            outline: none;
+            .navbar-toggler-icon{
+                background-image: url('../img/svg/Vector.svg');
+                height: 1em;
+            }
+        }
+        #collapsibleNavId{
+            flex-grow: 0;
+            ul{
+                text-align: right;
+                .nav-form{
+                    padding-right: 0;
+                }
+                li{
+                    .form-inline{
+                        @media only screen and (max-width: 767px) {
+                           display: none;
+                        }
+                        .input-group{
+                            height: 50px;
+                            width: 100%;
+                            @media only screen and (min-width: 1024px) {
+                                width: 17em !important;
+                            }
+                            span{
+                                @media only screen and (max-width: 768px) {
+                                    padding-left: 15% !important;
+                                    height: 2.6em !important;
+                                }
+                                border: 1px solid $color-red;
+                                border-right: none;
+                                background: white;
+                                border-bottom-left-radius: 3em;
+                                border-top-left-radius: 3em;
+                                height: 50px;
+                                padding-left: 20%;
+                                i{
+                                    font-size: $size-16;
+                                    color: $color-383838;
+                                    padding: 0.5em;
+                                }
+                            }
+                            input{
+                                padding-left: 0.5em;
+                                border: 1px solid $color-red;
+                                border-left: none;
+                                font-size: $size-16;
+                                padding-top: 0;
+                                border-bottom-right-radius: 3em;
+                                border-top-right-radius: 3em;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    
+                    a{
+                        @media only screen and (max-width: 768px) and (min-width: 767px) {
+                            padding-left: 0 !important;
+                            font-size: $size-12 !important;
+                        }
+
+                        font-size: $size-16;
+                        img{
+                            height: 1.7em;
+                            width: 1.7em;
+                        }
+                    }
+                    
+                    button{
+                        @media only screen and (max-width: 768px) {
+                            padding: 0.5em 1em !important;
+                            font-size: $size-13;
+                        }
+                        height: 3em;
+                        font-size: $size-14;
+                        line-height: 16px;
+                        padding: 0.5em 1.7em;
+                        color: $color-white;
+                        text-transform: uppercase;
+                        border: none;
+                        background: $color-red;
+                        border-radius: 2em;
+                        &:focus{
+                            outline: 0;
+                        }
+                        @media only screen and (min-width: 768px) {
+                            &:hover{
+                                background: $color-white;
+                                border: 1px solid $color-red;
+                                color: $color-red;
+                            }
+                        }
+                    }
+                }
+                .menu-row{
+                    @media only screen and (max-width: 767px) {
+                        padding: 0 !important;
+                    }                    
+                }
+                .menu-item{
+                    margin-top: 0.15em;
+                    a{
+                        font-weight: 600;
+                        color: $color-4a4a4a;
+                        &:hover{
+                            color: $color-red;
+                        }
+                    }
+                }
+                .img-btn-row{
+                    padding: 0;
+                    .img-btn{
+                    
+                        @media only screen and (max-width: 767px) {
+                            a{
+                                display: none;
+                            }
+                            button{
+                                background: none;
+                                color: $color-red;
+                                font-weight: 600;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                    .img-btn-btn{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,182 +1,17 @@
+@import "fonts";
 @import "variable";
 @import "mixin";
+@import "header";
+@import "footer";
 body{
     max-width: 1440px;
     margin: 0; 
     margin: 0 auto;
     padding: 0;
     font-size: $size-24;
-    //font-family: Arial, Helvetica, sans-serif;
+    //font-family: Avenir-Black;
 }
-header{
-    height: 104px;
-    @media only screen and (max-width: 767px) {
-        height: 44px;
-    }
-    @media only screen and (min-width: 1024px) {
-        padding-top: 0.5em;
-    }
-    #collapsibleNavId{
-        background: white;
-        z-index: 500;
-    }
-    .navbar{
-        width: 100%;
-        justify-content: center;
-        @media only screen and (max-width: 767px) {
-            justify-content: space-between;
-            height: 44px;
-            padding: 0;
-        }
 
-        a{
-            .logo{
-                margin-left: 0.5em;
-                @media only screen and (max-width: 1024px) {
-                    margin-left: 0.5em !important;
-                }
-                @media only screen and (max-width: 767px) {
-                    width: 4em !important;
-                }
-
-            }
-        }
-        .navbar-toggler {
-            border: none;
-            outline: none;
-            .navbar-toggler-icon{
-                background-image: url('../img/svg/Vector.svg');
-                height: 1em;
-            }
-        }
-        #collapsibleNavId{
-            flex-grow: 0;
-            ul{
-                text-align: right;
-                .nav-form{
-                    padding-right: 0;
-                }
-                li{
-                    .form-inline{
-                        @media only screen and (max-width: 767px) {
-                           display: none;
-                        }
-                        .input-group{
-                            width: 100%;
-                            @media only screen and (min-width: 1024px) {
-                                width: 17em !important;
-                            }
-                            span{
-                                @media only screen and (max-width: 768px) {
-                                    padding-left: 15% !important;
-                                    height: 2.6em !important;
-                                }
-                                border: 1px solid $color-red;
-                                border-right: none;
-                                background: white;
-                                border-bottom-left-radius: 3em;
-                                border-top-left-radius: 3em;
-                                height: 3.6em;
-                                padding-left: 40%;
-                                i{
-                                    font-size: $size-16;
-                                    color: $color-383838;
-                                    padding: 0.5em;
-                                }
-                            }
-                            input{
-                                padding-left: 0.5em;
-                                border: 1px solid $color-red;
-                                border-left: none;
-                                font-size: $size-16;
-                                padding-top: 0;
-                                border-bottom-right-radius: 3em;
-                                border-top-right-radius: 3em;
-                                &:focus{
-                                    box-shadow: none;
-                                }
-                            }
-                        }
-                    }
-                    
-                    a{
-                        @media only screen and (max-width: 768px) and (min-width: 767px) {
-                            padding-left: 0 !important;
-                            font-size: $size-12 !important;
-                        }
-
-                        font-size: $size-16;
-                        img{
-                            height: 1.7em;
-                            width: 1.7em;
-                        }
-                    }
-                    
-                    button{
-                        @media only screen and (max-width: 768px) {
-                            padding: 0.5em 1em !important;
-                            font-size: $size-13;
-                        }
-                        height: 3em;
-                        font-size: $size-14;
-                        line-height: 16px;
-                        padding: 0.5em 1.7em;
-                        color: $color-white;
-                        text-transform: uppercase;
-                        border: none;
-                        background: $color-red;
-                        border-radius: 2em;
-                        &:focus{
-                            outline: 0;
-                        }
-                        &:hover{
-                            background: $color-white;
-                            border: 1px solid $color-red;
-                            color: $color-red;
-                        }
-                    }
-                }
-                .menu-row{
-                    @media only screen and (max-width: 767px) {
-                        padding: 0 !important;
-                    }                    
-                }
-                .menu-item{
-                    margin-top: 0.15em;
-                    &:hover{
-                        a{
-                            color: $color-red;
-                        }
-                    }
-                    a{
-                        font-weight: 600;
-                        color: $color-4a4a4a;
-                    }
-                }
-                .img-btn-row{
-                    padding: 0;
-                    .img-btn{
-                    
-                        @media only screen and (max-width: 767px) {
-                            a{
-                                display: none;
-                            }
-                            button{
-                                background: none;
-                                color: $color-red;
-                                font-weight: 600;
-                                text-transform: capitalize;
-                            }
-                        }
-                    }
-                    .img-btn-btn{
-                        padding: 0;
-                    }
-                }
-            }
-        }
-    }
-}
 
 //panel
 .section-panel{
@@ -230,6 +65,7 @@ header{
         padding-top: 15%;
 
         .panel-title{
+            font-family: AvenirLTStd-Black;
             color: $color-white;
             font-size: $size-lg;
             line-height: 1.2em;
@@ -254,7 +90,7 @@ header{
         }
         @media only screen and (max-width: 414px) {
             padding-top: 0 !important;
-            padding-left: 2em !important;
+            padding-left: 1em !important;
             .panel-title{
                 padding-top: 4em !important;
                 font-size: 36px !important;
@@ -265,7 +101,14 @@ header{
                 font-size: $size-16;
             }
         }
+        @media only screen and (max-width: 320px) {
+            padding-left: 0.6em !important;
+            .panel-title{
+                padding-top: 2em !important;
+            }
+        }
         p{
+            font-family: AvenirLTStd-Medium;
             color: $color-white;
             width: 80%;
             margin-top: 16px;
@@ -275,6 +118,7 @@ header{
         }
     }
     .p-bottom{
+        font-family: AvenirLTStd-Medium;
         position: absolute;
         bottom: 2.5em;
         left: 3em;
@@ -287,15 +131,18 @@ header{
             bottom: 19em;
         }
         @media only screen and (max-width: 1024px) {
-            left: 1.5em;
+            left: 1em;
         }
         @media only screen and (max-width: 320px) {
             bottom: 21em;
 
         }
+        @media only screen and (max-width: 320px) {
+            left: 1.5em;
+        }
     }
     .browse{
-        
+        font-family: AvenirLTStd-Medium;
         @media only screen and (max-width: 575px) {
             height: auto;
             left: 8.5%;
@@ -358,8 +205,11 @@ header{
         .browse-looking{
             color: $color-footer;
             padding-top: 1.5em;
+            @media only screen and (max-width: 768px) and (min-width: 415px) {
+                padding-top: 1em !important;
+            }
         }
-        .borwse-investor{
+        .browse-investor{
             color: $color-footer;
             padding-top: 1.5em;
         }
@@ -374,6 +224,9 @@ header{
             form{
                 display: inline-block;
                 margin-left: 45px;
+                @media only screen and (max-width: 768px) and (min-width: 415px) {
+                    margin-left: 30px !important;
+                }
                 select{
                     color: $color-a7a9ac;
                 }
@@ -493,6 +346,7 @@ header{
             }
         }
         h1{
+            font-family: AvenirLTStd-Black;
             color: $color-383838;
             line-height: 1.2em;
             margin-bottom: 1em;
@@ -506,6 +360,7 @@ header{
             }
         }
         p{
+            font-family: AvenirLTStd-Light;
             color: $color-383838;
             line-height: 1.35em;
             margin: 0;
@@ -515,15 +370,14 @@ header{
             }
         }
         .join{
+            font-family: AvenirLTStd-Medium;
             @media only screen and (max-width: 1365px) {
                 margin-top: 1em !important;
             }
             margin-top: 2em;
             @include join-btn;
             &:hover{
-                background: $color-white;
-                border: 1px solid $color-red;
-                color: $color-red;
+                background: $color-red-hover;
             }
             @media only screen and (max-width: 375px) {
                 font-size: $size-14 !important;
@@ -548,6 +402,7 @@ header{
 
 // tech
 .tech{
+    font-family: AvenirLTStd-Medium;
     width: 100%;
     .row-tech{
         margin: 0;
@@ -572,6 +427,7 @@ header{
                     line-height: 16px !important;
                 }
                 h1{
+                    
                     font-size: $size-36 !important;
                     line-height: 40px !important;
                 }
@@ -591,6 +447,8 @@ header{
                 }
             }
             .tech-right{
+                max-width: calc(100% + 0.9em);
+                flex: 0 0 calc(100% + 0.9em);
                 .claim{
                     font-size: 0.8em !important;
                 }
@@ -617,6 +475,7 @@ header{
 
             }
             h1{
+                font-family: AvenirLTStd-Heavy;
                 font-size: $size-58;
                 line-height: 1em;
                 color: $color-red;
@@ -666,6 +525,10 @@ header{
                 }
                 @include claim-btn;
                 .claim-left{
+                    @media only screen and (max-width: 575px) {
+                        text-align: right;
+                        padding-right: 0;
+                    }
                     @media only screen and (max-width: 879px) {
                         word-wrap: break-word;
                         word-break: break-word;
@@ -673,6 +536,9 @@ header{
                     }
                 }
                 .claim-right{
+                    @media only screen and (max-width: 575px) {
+                        text-align: left;
+                    }
                     img{
                         @media only screen and (max-width: 575px) {
                             margin-top: -1.5em;
@@ -694,6 +560,7 @@ header{
             line-height: 27px;
             margin-bottom: 1em;
         }
+        font-family: AvenirLTStd-Black;
         margin-top: 1em;
         font-size: $size-lg;
         font-weight: 800;
@@ -707,6 +574,7 @@ header{
             font-size: $size-14;
             line-height: 16px;
         }
+        font-family: AvenirLTStd-Medium;
         text-transform: uppercase;
         color: $color-4a4a4a;
         margin-top: 1em;
@@ -723,6 +591,10 @@ header{
         display: none;
         @media only screen and(max-width: 414px) {
             display: block;
+        }
+        @media only screen and(max-width: 374px) {
+            width: 90%;
+            margin: 0 auto;
         }
     }
 }
@@ -742,6 +614,7 @@ header{
             }
     }
     h2{
+        font-family: AvenirLTStd-Black;
         font-size: $size-40;
         font-weight: 700;
         margin-bottom: 1em;
@@ -752,14 +625,15 @@ header{
     .sector-btn{
         text-align: left;
         button{
+            font-family: AvenirLTStd-Medium;
             background: white;
             border: 1px solid $color-red;
             margin-right: 0.5em;
             margin-bottom: 1em;
             &:hover{
                 background: $color-red;
-                border: 1px solid $color-red;
                 color: $color-white;
+                border: 1px solid $color-red;
             }
             @media only screen and (max-width: 414px) {
                 font-size: $size-12;
@@ -782,10 +656,11 @@ header{
         padding: 1em;
         padding-top: 2em;
     }
-    
+    font-family: AvenirLTStd-Medium;
     padding: 3em;
     background: $color-round;
     h2{
+        font-family: AvenirLTStd-Black;
         color: $color-white;
         text-align: center;
         margin-bottom: 1em;
@@ -813,10 +688,16 @@ header{
                 margin: 1em 0.1em;
                 .box-left{
                     @media only screen and (max-width: 414px) {
-                        padding-left: 0.1em;
+                        padding-left: 0.5em;
+                    }
+                    @media only screen and (max-width: 375px) {
+                        padding-left: 0.3em;
                     }
                     @media only screen and (min-width: 1367px) {
                         padding-left: 0.5em;
+                    }
+                    @media only screen and (min-width: 768px) {
+                        padding-left: 0.2em;
                     }
                     border-right: 1px solid $color-red;
                     padding: 0;
@@ -829,6 +710,10 @@ header{
                         color: $color-808080;
                         font-size: $size-24;
                         line-height: 28px;
+                        @media only screen and (max-width: 414px) {
+                            font-size: $size-16;
+                        line-height: 19px;
+                        }
                     }
                 }
                 .box-between{
@@ -874,6 +759,7 @@ header{
             text-align: left;
             padding-left: 1em;
         }
+        font-family: AvenirLTStd-Black;
         color: $color-white;
         font-size: $size-40;
         line-height: 67px;
@@ -886,9 +772,7 @@ header{
     button{
         @include join-btn;
         &:hover{
-            background: $color-white;
-            border: 1px solid $color-red;
-            color: $color-red;
+            background: $color-red-hover;
         }
         @media only screen and (max-width: 414px) {
             margin-left: -4em;
@@ -899,106 +783,3 @@ header{
     }
 }
 
-//footer
-footer{
-    .row{
-        margin: 0;
-    }
-    @media only screen and (max-width: 1024px) {
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-    padding-left: 3em;
-    padding-right: 3em;
-    background: $color-footer;
-    padding-top: 1em;
-    h3{
-        color: $color-white;
-        font-size: $size-14;
-        line-height: 16px;
-        margin-bottom: 1em;
-        text-transform: uppercase;
-    }
-    ul{
-        list-style-type: none;
-        padding-left: 0;
-        font-size: $size-12;
-        color: $color-979797;
-        li{
-            margin-bottom: 0.5em;
-        }
-    }
-    .footer-end{
-        padding-right: 0;
-        img{
-            width: 90%;
-            height: auto;
-            margin-bottom: 1em;
-        }
-        text-align: right;
-        @media only screen and (max-width: 575px) {
-            text-align: left !important;
-        }
-        ul{
-            li{
-                margin-bottom: 0.1em !important;
-            }
-        }
-    }
-    .copy-right{
-        width: 100%;
-        font-size: $size-10;
-        line-height: 16px;
-        padding-bottom: 1em;
-        .cp-r-row{
-            border-top: 1px solid $color-border-cp-r;
-            padding-top: 1em;
-            .cp-r-1{
-                .cp-r-btn{
-                    
-                    border-right: 1px solid $color-808080;
-                   
-                }
-                
-                button{
-                    padding: 0;
-                    line-height: 0.5em;
-                    border: 0;
-                    background: none;
-                  
-                    
-                    @media only screen and (max-width: 575px) {
-                        text-transform: uppercase;
-                    }
-                    a{
-                        color: $color-copy-right;
-                    }
-                }
-            }
-            .cp-r-2{
-                p{
-                    color: $color-808080;
-                    text-align: center;
-                    margin: 0;
-                    @media only screen and (max-width: 575px) {
-                       text-align: center;
-                       margin-top: 2em;
-                    }
-                }
-            }
-            .cp-r-3{
-                p{
-                    @media only screen and (max-width: 575px) {
-                        text-align: center;
-                        margin-top: 1em;
-                        margin-bottom: 1em;
-                    }
-                    text-align: right;
-                    color: $color-white;
-                    text-transform: uppercase;
-                    margin: 0;
-                }
-            }
-        }
-    }
-}

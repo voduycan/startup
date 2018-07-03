@@ -1,4 +1,6 @@
+
 @mixin join-btn {
+    font-family: AvenirLTStd-Medium;
     width: 18em;
     height: 3em;
     background: red;
@@ -14,6 +16,7 @@
 }
 
 @mixin claim-btn {
+    font-family: AvenirLTStd-Medium;
     &:hover{
         background: $color-red-hover;
     }
@@ -41,3 +44,4 @@
         }
     }
 }
+
