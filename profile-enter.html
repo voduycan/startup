@@ -10,33 +10,26 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="scss/profile.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  </head>
-  <body>
+
+</head>
+
+<body>
     <header>
-      <img src="./img/svg/StartupSG-Light.svg" alt="">
+        <img src="./img/svg/StartupSG-Light.svg" alt="">
     </header>
     <section class="enter">
-      <h3>Find Your Company Profile</h3>
-      <h5 class="h5-1">Startup SG Network is a directory of entities in Singapore’s technology startup ecosystem. As such, we only accept technology companies registered with Accounting  and Corporate Regulatory Authority (ACRA).</h5>
-      <h5>Unique Identity Number (UEN)</h5>
-      <h6>If you do not remember your UEN, you can enter your registered entity name to search for it.</h6>
-      <div class="input-group mb-1">
-        <select class="custom-select" id="inputGroupSelect02">
-            <option selected>Please enter your UEN</option>
-            <option value="1">
-                <div class="row">
-                    <div class="col-3 col-sm-3"><img src="./img/png/Rectangle.png" alt=""></div>
-                    <div class="col-6 col-sm-6">vani</div>
-                    <div class="col-3 col-sm-3">1234-567x</div>
-                </div>
-            </option>
-            <option value="2" style="background-image:url('../img/png/Rectangle.png');">Two</option>
-            <option value="3">Three</option>
-          </select>
-        <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2">next <img src="./img/svg/tail-right.svg" alt=""></span>
-        </div>
-      </div>
+        <h3>Find Your Company Profile</h3>
+        <h5 class="h5-1">Startup SG Network is a directory of entities in Singapore’s technology startup ecosystem. As such, we only accept technology companies registered with Accounting  and Corporate Regulatory Authority (ACRA).</h5>
+        <h5>Unique Identity Number (UEN)</h5>
+        <h6>If you do not remember your UEN, you can enter your registered entity name to search for it.</h6>
+       
+        <form autocomplete="off" action="">
+            <div class="autocomplete">
+                <input id="myInput" type="text" name="myCountry" placeholder="Please enter your UEN">
+            </div>
+            <button type="submit">Next <img src="./img/svg/tail-right.svg" alt=""></button>
+        </form>
+            
       <div class="warning">
           <div class="row">
               <div class="col-1 col-sm-1 warning-left"><img src="./img/svg/Warning.svg" alt=""></div>
@@ -61,5 +54,8 @@
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="./js/autocomplete.js"></script>
+    
   </body>
 </html>

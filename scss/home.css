@@ -48,6 +48,7 @@ header {
     z-index: 500; }
   header .navbar {
     width: 100%;
+    padding-top: 20px;
     justify-content: center; }
     @media only screen and (max-width: 767px) {
       header .navbar {
@@ -121,19 +122,20 @@ header {
             height: 1.7em;
             width: 1.7em; }
         header .navbar #collapsibleNavId ul li button {
-          height: 3em;
+          font-family: AvenirLTStd-Medium !important;
+          width: 100px;
+          height: 43px;
           font-size: 14px;
           line-height: 16px;
-          padding: 0.5em 1.7em;
           color: white;
           text-transform: uppercase;
           border: none;
           background: #F4333D;
           border-radius: 2em; }
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 575px) {
             header .navbar #collapsibleNavId ul li button {
-              padding: 0.5em 1em !important;
-              font-size: 12px; } }
+              padding-right: 1em !important;
+              text-align: right; } }
           header .navbar #collapsibleNavId ul li button:focus {
             outline: 0; }
           @media only screen and (min-width: 768px) {
@@ -536,6 +538,8 @@ body {
   @media only screen and (max-width: 414px) {
     .birdging .birdging-left {
       padding: 1em; }
+      .birdging .birdging-left h1 {
+        padding-top: 0.5em !important; }
       .birdging .birdging-left .join {
         margin-top: 1em !important; } }
   .birdging .birdging-left h1 {
@@ -836,25 +840,16 @@ body {
       color: #F4333D; }
   .round .row-out .list-box .row-in {
     background: white;
-    margin: 1em 0.1em; }
+    margin: 20px 0; }
+    @media only screen and (max-width: 575px) {
+      .round .row-out .list-box .row-in {
+        margin: 8px 0 !important; } }
     .round .row-out .list-box .row-in .box-left {
+      text-align: center;
       border-right: 1px solid #F4333D;
       padding: 0;
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-      padding-left: 0.4em; }
-      @media only screen and (max-width: 414px) {
-        .round .row-out .list-box .row-in .box-left {
-          padding-left: 0.5em; } }
-      @media only screen and (max-width: 375px) {
-        .round .row-out .list-box .row-in .box-left {
-          padding-left: 0.3em; } }
-      @media only screen and (min-width: 1367px) {
-        .round .row-out .list-box .row-in .box-left {
-          padding-left: 0.5em; } }
-      @media only screen and (min-width: 768px) {
-        .round .row-out .list-box .row-in .box-left {
-          padding-left: 0.2em; } }
+      padding-top: 0.65em;
+      padding-bottom: 0.5em; }
       .round .row-out .list-box .row-in .box-left p {
         text-transform: uppercase;
         margin: 0;
@@ -865,6 +860,9 @@ body {
           .round .row-out .list-box .row-in .box-left p {
             font-size: 16px;
             line-height: 19px; } }
+      .round .row-out .list-box .row-in .box-left p.apr {
+        font-size: 16px;
+        line-height: 19px; }
     .round .row-out .list-box .row-in .box-between {
       padding-top: 0.5em;
       padding-bottom: 0.5em; }

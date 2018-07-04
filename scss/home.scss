@@ -377,6 +377,9 @@ body{
         }
         @media only screen and (max-width: 414px) {
             padding: 1em;
+            h1{
+                padding-top: 0.5em !important;
+            }
             .join{
                 margin-top: 1em !important;
             }
@@ -722,35 +725,30 @@ body{
         .list-box{
             .row-in{
                 background: $color-white;
-                margin: 1em 0.1em;
+                margin: 20px 0;
+                @media only screen and (max-width: 575px) {
+                    margin: 8px 0 !important;
+                }
                 .box-left{
-                    @media only screen and (max-width: 414px) {
-                        padding-left: 0.5em;
-                    }
-                    @media only screen and (max-width: 375px) {
-                        padding-left: 0.3em;
-                    }
-                    @media only screen and (min-width: 1367px) {
-                        padding-left: 0.5em;
-                    }
-                    @media only screen and (min-width: 768px) {
-                        padding-left: 0.2em;
-                    }
+                    text-align: center;
                     border-right: 1px solid $color-red;
                     padding: 0;
-                    padding-top: 0.5em;
+                    padding-top: 0.65em;
                     padding-bottom: 0.5em;
-                    padding-left: 0.4em;
                     p{
                         text-transform: uppercase;
                         margin: 0;
                         color: $color-808080;
                         font-size: $size-24;
-                        line-height: 28px;
+                        line-height: $size-24+4;
                         @media only screen and (max-width: 414px) {
                             font-size: $size-16;
-                        line-height: 19px;
+                            line-height: $size-16+3;
                         }
+                    }
+                    p.apr{
+                        font-size: $size-16;
+                        line-height: $size-16+3;
                     }
                 }
                 .box-between{

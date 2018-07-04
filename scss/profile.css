@@ -97,7 +97,7 @@ footer {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   position: relative; }
   body h1, body h2, body h3 {
     font-family: AvenirLTStd-Black; }
@@ -126,7 +126,7 @@ body {
   padding-left: 29%;
   padding-right: 29%;
   color: #383838; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     .enter {
       padding-left: 20% !important;
       padding-right: 20% !important; } }
@@ -144,56 +144,125 @@ body {
       line-height: 16px; }
     .enter h6, .enter .h5-1 {
       font-size: 12px;
-      line-height: 16px; }
-    .enter .input-group {
-      height: 40px !important; }
-      .enter .input-group select {
-        font-size: 14px !important;
-        line-height: 16px !important; }
-      .enter .input-group .input-group-append span {
-        font-size: 14px !important;
-        line-height: 15px; }
-        .enter .input-group .input-group-append span img {
-          width: 18px !important; }
-    .enter .warning {
-      padding-left: 0 !important; }
-      .enter .warning .row .warning-left img {
-        width: 16px !important;
-        height: 15px !important; }
-      .enter .warning .row .warning-right {
-        font-size: 11px !important;
-        line-height: 13px !important; } }
+      line-height: 16px; } }
   .enter .h5-1 {
     margin-top: 1em;
     margin-bottom: 40px; }
   .enter h6 {
     color: #979797; }
-  .enter .input-group {
+  .enter * {
+    box-sizing: border-box; }
+  .enter form {
+    width: 100%;
     height: 64px; }
-    .enter .input-group select {
-      border-radius: 0;
-      height: 100%;
-      font-size: 16px;
-      line-height: 19px;
-      background-image: none; }
-    .enter .input-group .input-group-append {
-      width: 25%; }
-      .enter .input-group .input-group-append span {
-        border-radius: 0;
-        background: #383838;
-        color: white;
-        width: 100%;
-        text-transform: uppercase;
-        font-size: 20px;
-        padding-left: 15%; }
-        .enter .input-group .input-group-append span img {
-          width: 30px;
-          margin-left: 0.5em; }
+    @media only screen and (max-width: 414px) {
+      .enter form {
+        height: 40px !important; } }
+  .enter .autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+    width: 74%;
+    height: 100%; }
+  .enter input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px; }
+  .enter input[type=text] {
+    font-family: AvenirLTStd-Light;
+    background-color: white;
+    width: 102%;
+    border: 1px solid #DADADA;
+    color: #383838;
+    font-size: 16px;
+    line-height: 19px;
+    height: 100%; }
+    @media only screen and (max-width: 414px) {
+      .enter input[type=text] {
+        font-size: 14px;
+        line-height: 16px;
+        border: 1px solid #383838; } }
+  .enter button[type=submit] {
+    background-color: #383838;
+    color: white;
+    width: 24%;
+    height: 100%;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: AvenirLTStd-Medium; }
+    @media only screen and (max-width: 414px) {
+      .enter button[type=submit] {
+        font-size: 14px;
+        line-height: 15px; } }
+    @media only screen and (max-width: 373px) {
+      .enter button[type=submit] {
+        font-size: 13px;
+        line-height: 14px; } }
+    .enter button[type=submit] img {
+      width: 25px;
+      height: auto; }
+      @media only screen and (max-width: 414px) {
+        .enter button[type=submit] img {
+          width: 18px !important; } }
+  .enter .autocomplete-items {
+    width: 102%;
+    position: absolute;
+    border: 1px solid #DADADA;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0; }
+    @media only screen and (max-width: 414px) {
+      .enter .autocomplete-items {
+        width: 134%;
+        border: 0;
+        box-shadow: 0px 2px 5px 0px #DADADA; } }
+  .enter .autocomplete-items div {
+    position: relative;
+    background-image: url(../img/png/Rectangle.png);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 44px;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: AvenirLTStd-Medium;
+    padding: 10px;
+    padding-left: 64px;
+    padding-right: 100px;
+    height: 64px;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 1px solid #DADADA; }
+    @media only screen and (max-width: 414px) {
+      .enter .autocomplete-items div {
+        font-size: 14px;
+        line-height: 15px;
+        background-size: 40px; } }
+    @media only screen and (max-width: 414px) {
+      .enter .autocomplete-items div {
+        border-bottom: 0; } }
+  .enter span {
+    position: absolute;
+    right: 10px;
+    top: 18%; }
+  .enter .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: rgba(121, 108, 109, 0.1207); }
+  .enter .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: rgba(121, 108, 109, 0.1207) !important; }
   .enter .warning {
+    margin-top: 0.5em;
     padding-left: 12px; }
     @media only screen and (max-width: 375px) {
       .enter .warning .row .warning-left {
-        padding-left: 16px;
+        padding-left: 4px;
         padding-right: 0; } }
     .enter .warning .row .warning-left img {
       width: 13px;
@@ -205,6 +274,13 @@ body {
       color: #F4333D; }
       @media only screen and (min-width: 576px) {
         .enter .warning .row .warning-right {
-          padding-left: 8px; } }
+          padding-left: 8px !important; } }
+      @media only screen and (max-width: 575px) {
+        .enter .warning .row .warning-right {
+          padding-left: 0px !important; } }
+      @media only screen and (max-width: 414px) {
+        .enter .warning .row .warning-right {
+          font-size: 11px;
+          line-height: 13px; } }
 
 /*# sourceMappingURL=profile.css.map */
