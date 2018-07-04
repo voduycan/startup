@@ -7,10 +7,9 @@ function autocomplete(inp, arr) {
     inp.addEventListener("input", function(e) {
         var a, b, i, val = this.value;
         var count = 0;
-        var warning = this.value;
-        warning.innerHTML = "<span> class='warning'>We couldn't find any matching companies. Please try again.</span>";
         /*close any already open lists of autocompleted values*/
         closeAllLists();
+        closeWarning();
         if (!val) { return false;}
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
@@ -47,7 +46,19 @@ function autocomplete(inp, arr) {
         }
         if(count===0) {
             //warning.appendChild();
-            console.log('bld');
+            var warningDiv = document.getElementById('warning-error');
+            var warningIcon = document.createElement('DIV');
+            warningIcon.setAttribute('class', 'col-1 col-sm-1 warning-left');
+            warningIcon.innerHTML = '<img src="./img/svg/Warning.svg" alt="">';
+            var warningText = document.createElement('DIV');
+            warningText.setAttribute('class', 'col-11 col-sm-11 warning-right');
+            warningText.innerHTML = "We couldn't find any matching companies. Please try again.";
+
+            warningDiv.appendChild(warningIcon);
+            warningDiv.appendChild(warningText);
+
+            var myInput = $('#myInput');
+            myInput.css({'border-color': 'red'});
         }
     });
     
@@ -91,6 +102,12 @@ function autocomplete(inp, arr) {
         for (var i = 0; i < x.length; i++) {
         x[i].classList.remove("autocomplete-active");
         }
+    }
+    function closeWarning() {
+        var warningDiv = document.getElementById('warning-error');
+        warningDiv.innerHTML = '';
+        var myInput = $('#myInput');
+        myInput.css({'border-color': ''});
     }
     function closeAllLists(elmnt) {
         /*close all autocomplete lists in the document,

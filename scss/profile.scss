@@ -2,43 +2,8 @@
 @import "variable";
 @import "header-profile";
 @import "footer-profile";
+@import "reset";
 
-body{
-    max-width: 1440px;
-    margin: 0 auto;
-    min-height: 100vh;
-    position: relative;
-    h1,h2,h3{
-        font-family: AvenirLTStd-Black;
-    }
-    h4,h5,h6{
-        font-family: AvenirLTStd-Medium;
-    }
-    h1{
-        font-size: $size-lg;
-        line-height: 64px;
-    }
-    h2{
-        font-size: $size-40;
-        line-height: 48px;
-    }
-    h3{
-        font-size: $size-36;
-        line-height: 48px;
-    }
-    h4{
-        font-size: $size-20;
-        line-height: 24px;
-    }
-    h5{
-        font-size: $size-16;
-        line-height: 24px;
-    }
-    h6{
-        font-size: $size-14;
-        line-height: 16px;
-    }    
-}
 .enter{
     @media only screen and (max-width: 1023px) {
         padding-left: 20% !important;
@@ -95,6 +60,7 @@ body{
             font-size: 16px;
         }
         input[type=text] {
+            outline: 0;
             font-family: AvenirLTStd-Light;
             background-color: $color-white;
             width: 102%;
@@ -191,36 +157,37 @@ body{
         /*when navigating through the items using the arrow keys:*/
             background-color: $color-hover-autocomplete !important; 
     }
-    .warning{
+    #warning-error{
         margin-top: 0.5em;
         padding-left: 12px;
-        .row{
-            .warning-left{
-                @media only screen and (max-width: 375px) {
-                    padding-left: 4px;
-                    padding-right: 0;
-                }
-                img{
-                    width: 13px;
-                    height: 13px;
-                    margin-top: -15px;
-                }
+    
+        .warning-left{
+            padding-right: 0;
+            @media only screen and (max-width: 375px) {
+                padding-left: 4px;
             }
-            .warning-right{
-                font-size: $size-12;
-                line-height: $size-12+2;
-                color: $color-red;
-                @media only screen and (min-width: 576px) {
-                    padding-left: 8px !important;
-                }
-                @media only screen and (max-width: 575px) {
-                    padding-left: 0px !important;
-                }
-                @media only screen and (max-width: 414px) {
-                    font-size: $size-11;
-                    line-height: $size-11+2;
-                }
+            img{
+                width: 13px;
+                height: 13px;
+                margin-top: -15px;
             }
         }
+        .warning-right{
+            font-size: $size-12;
+            line-height: $size-12+2;
+            color: $color-red;
+            @media only screen and (min-width: 576px) {
+                padding-left: 8px !important;
+            }
+            @media only screen and (max-width: 575px) {
+                padding-left: 0px !important;
+            }
+            @media only screen and (max-width: 414px) {
+                font-size: $size-11;
+                line-height: $size-11+2;
+            }
+        }
+        
     }
 }
+

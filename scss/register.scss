@@ -1,0 +1,79 @@
+@import "fonts";
+@import "variable";
+@import "header-profile";
+@import "footer-profile";
+@import "reset";
+
+//register
+.register{
+    padding-left: 29%;
+    padding-right: 29%;
+    h3{
+        font-size: $size-36;
+        line-height: $size-36 + 6;
+        margin-bottom: 24px;
+        font-family: AvenirLTStd-Black;
+    }
+    @media only screen and (max-width: 1023px) {
+        padding-left: 20% !important;
+        padding-right: 20% !important;
+    }
+    @media only screen and (max-width: 575px) {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+    @media only screen and (max-width: 414px) {
+        h3{
+            font-size: $size-24;
+            line-height: 28px;
+            margin-top: -28px;
+        }
+    }
+    color: $color-383838;
+    .needs-validation{
+        .form-input{
+            div{
+                .was-validated .form-control:valid {
+                    border-color: red;
+                }
+                label{
+                    margin-top: 27px;
+                    font-size: $size-16;
+                    line-height: $size-16 + 8;
+                    font-family: AvenirLTStd-Medium;
+                    margin-bottom: 0;
+                }
+                input{
+                    border-radius: 0;
+                    font-size: $size-16;
+                    line-height: $size-16;
+                    font-family: AvenirLTStd-Light;
+                    color: $color-808080;
+                    height: 40px;
+                }
+            }
+        }
+        .form-btn{
+            margin-top: 64px;
+            .btn-already{
+                font-size: $size-14;
+                line-height: $size-14 + 2;
+                height: 64px;
+                width: 100%;
+                background: $color-EFEFEF;
+                color: $color-383838;
+                border-radius: 0;
+            }
+            .btn-sign-up{
+                font-size: $size-20;
+                line-height: $size-20 - 5;
+                height: 64px;
+                width: 100%;
+                background: $color-383838;
+                color: $color-white;
+                text-transform: uppercase;
+                border-radius: 0;
+            }
+        }
+    }
+}

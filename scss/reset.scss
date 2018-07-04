@@ -1,0 +1,36 @@
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 1009.96px;
+    position: relative;
+    h1,h2,h3{
+        font-family: AvenirLTStd-Black;
+    }
+    h4,h5,h6{
+        font-family: AvenirLTStd-Medium;
+    }
+    h1{
+        font-size: $size-lg;
+        line-height: 64px;
+    }
+    h2{
+        font-size: $size-40;
+        line-height: 48px;
+    }
+    h3{
+        font-size: $size-36;
+        line-height: 48px;
+    }
+    h4{
+        font-size: $size-20;
+        line-height: 24px;
+    }
+    h5{
+        font-size: $size-16;
+        line-height: 24px;
+    }
+    h6{
+        font-size: $size-14;
+        line-height: 16px;
+    }    
+}
