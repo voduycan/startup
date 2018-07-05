@@ -34,44 +34,5 @@
 @font-face {
   font-family: AvenirLTStd-Roman;
   src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype"); }
-h1, h2, h3 {
-  font-family: AvenirLTStd-Black; }
 
-h4, h5, h6 {
-  font-family: AvenirLTStd-Medium; }
-
-h1 {
-  font-size: 60px;
-  line-height: 64px; }
-
-h2 {
-  font-size: 40px;
-  line-height: 48px; }
-
-h3 {
-  font-size: 36px;
-  line-height: 48px; }
-
-h4 {
-  font-size: 20px;
-  line-height: 24px; }
-
-h5 {
-  font-size: 16px;
-  line-height: 24px; }
-
-h6 {
-  font-size: 14px;
-  line-height: 16px; }
-
-header {
-  width: 42%;
-  margin: 0 auto;
-  padding-top: 34px;
-  padding-bottom: 34px;
-  background: wheat; }
-  header img {
-    width: 146px;
-    height: auto; }
-
-/*# sourceMappingURL=profile-enter.css.map */
+/*# sourceMappingURL=fonts.css.map */

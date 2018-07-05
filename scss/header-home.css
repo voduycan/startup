@@ -1,0 +1,145 @@
+header {
+  padding-left: 3em;
+  padding-right: 3em;
+  font-family: AvenirLTStd-Medium !important;
+  height: 104px; }
+  @media only screen and (max-width: 767px) {
+    header {
+      height: 44px; } }
+  @media only screen and (min-width: 1024px) {
+    header {
+      padding-top: 0.5em; } }
+  @media only screen and (max-width: 1024px) {
+    header {
+      padding-left: 1em;
+      padding-right: 1em; } }
+  @media only screen and (max-width: 575px) {
+    header {
+      padding-left: 0em;
+      padding-right: 0em; } }
+  header #collapsibleNavId {
+    background: white;
+    z-index: 500; }
+  header .navbar {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    padding-top: 12px;
+    justify-content: space-between; }
+    @media only screen and (max-width: 767px) {
+      header .navbar {
+        justify-content: space-between;
+        height: 44px;
+        padding: 0; } }
+    header .navbar a .logo {
+      margin-left: 0.5em; }
+      @media only screen and (max-width: 1024px) {
+        header .navbar a .logo {
+          margin-left: 0.5em !important; } }
+      @media only screen and (max-width: 767px) {
+        header .navbar a .logo {
+          width: 4em !important; } }
+    header .navbar .navbar-toggler {
+      border: none;
+      outline: none; }
+      header .navbar .navbar-toggler .navbar-toggler-icon {
+        background-image: url("../img/svg/Vector.svg");
+        height: 1em; }
+    header .navbar #collapsibleNavId {
+      flex-grow: 0; }
+      header .navbar #collapsibleNavId ul {
+        text-align: right; }
+        header .navbar #collapsibleNavId ul .nav-form {
+          padding-right: 0; }
+          @media only screen and (max-width: 768px) {
+            header .navbar #collapsibleNavId ul .nav-form {
+              margin-top: -5px !important; } }
+        @media only screen and (max-width: 767px) {
+          header .navbar #collapsibleNavId ul li .form-inline {
+            display: none; } }
+        header .navbar #collapsibleNavId ul li .form-inline .input-group {
+          height: 100%;
+          width: 100%; }
+          @media only screen and (min-width: 1024px) {
+            header .navbar #collapsibleNavId ul li .form-inline .input-group {
+              width: 17em !important; } }
+          header .navbar #collapsibleNavId ul li .form-inline .input-group span {
+            border: 1px solid #F4333D;
+            border-right: none;
+            background: white;
+            border-bottom-left-radius: 3em;
+            border-top-left-radius: 3em;
+            height: 50px;
+            padding-left: 20%; }
+            @media only screen and (max-width: 768px) {
+              header .navbar #collapsibleNavId ul li .form-inline .input-group span {
+                padding-left: 15% !important;
+                height: 2.6em !important; } }
+            header .navbar #collapsibleNavId ul li .form-inline .input-group span i {
+              font-size: 16px;
+              color: #383838;
+              padding: 0.5em; }
+          header .navbar #collapsibleNavId ul li .form-inline .input-group input {
+            padding-left: 0.5em;
+            border: 1px solid #F4333D;
+            border-left: none;
+            font-size: 16px;
+            border-bottom-right-radius: 3em;
+            border-top-right-radius: 3em; }
+            header .navbar #collapsibleNavId ul li .form-inline .input-group input:focus {
+              box-shadow: none; }
+        header .navbar #collapsibleNavId ul li a {
+          font-size: 16px; }
+          @media only screen and (max-width: 768px) and (min-width: 767px) {
+            header .navbar #collapsibleNavId ul li a {
+              padding-left: 0 !important;
+              font-size: 12px !important; } }
+          header .navbar #collapsibleNavId ul li a img {
+            height: 1.7em;
+            width: 1.7em; }
+        header .navbar #collapsibleNavId ul li button {
+          font-family: AvenirLTStd-Medium !important;
+          width: 100px;
+          height: 43px;
+          font-size: 14px;
+          line-height: 16px;
+          color: white;
+          text-transform: uppercase;
+          border: none;
+          background: #F4333D;
+          border-radius: 2em; }
+          @media only screen and (max-width: 575px) {
+            header .navbar #collapsibleNavId ul li button {
+              padding-right: 1em !important;
+              text-align: right; } }
+          header .navbar #collapsibleNavId ul li button:focus {
+            outline: 0; }
+          @media only screen and (min-width: 768px) {
+            header .navbar #collapsibleNavId ul li button:hover {
+              background: white;
+              border: 1px solid #F4333D;
+              color: #F4333D; } }
+        @media only screen and (max-width: 767px) {
+          header .navbar #collapsibleNavId ul .menu-row {
+            padding: 0 !important; } }
+        header .navbar #collapsibleNavId ul .menu-item {
+          margin-top: 0.15em; }
+          header .navbar #collapsibleNavId ul .menu-item a {
+            font-weight: 600;
+            color: #4A4A4A; }
+            header .navbar #collapsibleNavId ul .menu-item a:hover {
+              color: #F4333D; }
+        header .navbar #collapsibleNavId ul .img-btn-row {
+          padding: 0; }
+          @media only screen and (max-width: 767px) {
+            header .navbar #collapsibleNavId ul .img-btn-row .img-btn a {
+              display: none; }
+            header .navbar #collapsibleNavId ul .img-btn-row .img-btn button {
+              background: none;
+              color: #F4333D;
+              font-weight: 600;
+              text-transform: capitalize; } }
+          header .navbar #collapsibleNavId ul .img-btn-row .img-btn-btn {
+            padding: 0; }
+
+/*# sourceMappingURL=header-home.css.map */

@@ -41,7 +41,7 @@ header {
   margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 34px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     header {
       padding-left: 20% !important;
       padding-right: 20% !important; } }
@@ -97,8 +97,12 @@ footer {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  height: 1009.96px;
+  min-height: 1009.96px;
+  height: 100vh;
   position: relative; }
+  @media only screen and (max-width: 414px) {
+    body {
+      min-height: 100vh !important; } }
   body h1, body h2, body h3 {
     font-family: AvenirLTStd-Black; }
   body h4, body h5, body h6 {
@@ -122,6 +126,9 @@ body {
     font-size: 14px;
     line-height: 16px; }
 
+.red-color {
+  color: red; }
+
 .register {
   padding-left: 29%;
   padding-right: 29%;
@@ -129,7 +136,6 @@ body {
   .register h3 {
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 24px;
     font-family: AvenirLTStd-Black; }
   @media only screen and (max-width: 1023px) {
     .register {
@@ -143,25 +149,58 @@ body {
     .register h3 {
       font-size: 24px;
       line-height: 28px;
-      margin-top: -28px; } }
-  .register .needs-validation .form-input div .was-validated .form-control:valid {
-    border-color: red; }
-  .register .needs-validation .form-input div label {
-    margin-top: 27px;
-    font-size: 16px;
-    line-height: 24px;
-    font-family: AvenirLTStd-Medium;
-    margin-bottom: 0; }
-  .register .needs-validation .form-input div input {
-    border-radius: 0;
-    font-size: 16px;
-    line-height: 16px;
-    font-family: AvenirLTStd-Light;
-    color: #808080;
-    height: 40px; }
+      margin-top: 20px; } }
+  .register .was-validated .form-control:invalid ~ .input-label {
+    color: #F4333D; }
+  .register .was-validated .form-control:valid ~ .input-label {
+    color: #383838; }
+  .register .needs-validation .form-input .my-group {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    margin-top: 48px; }
+    @media only screen and (max-width: 414px) {
+      .register .needs-validation .form-input .my-group {
+        margin-top: 40px; } }
+    .register .needs-validation .form-input .my-group .input-label {
+      position: absolute;
+      top: -25px;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: AvenirLTStd-Medium; }
+      @media only screen and (max-width: 414px) {
+        .register .needs-validation .form-input .my-group .input-label {
+          font-size: 14px;
+          line-height: 16px;
+          top: -20px; } }
+    .register .needs-validation .form-input .my-group input {
+      border-radius: 0;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: AvenirLTStd-Light;
+      color: #808080;
+      height: 40px; }
+      @media only screen and (max-width: 414px) {
+        .register .needs-validation .form-input .my-group input {
+          font-size: 14px;
+          line-height: 16px; } }
+    .register .needs-validation .form-input .my-group .invalid-feedback span img {
+      margin-right: 5px;
+      margin-left: 10px;
+      margin-top: -3px; }
   .register .needs-validation .form-btn {
     margin-top: 64px; }
+    @media only screen and (max-width: 414px) {
+      .register .needs-validation .form-btn {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-left: -16px; } }
+    .register .needs-validation .form-btn div {
+      padding-left: 0;
+      padding-right: 0; }
     .register .needs-validation .form-btn .btn-already {
+      box-shadow: none !important;
       font-size: 14px;
       line-height: 16px;
       height: 64px;
@@ -169,7 +208,14 @@ body {
       background: #EFEFEF;
       color: #383838;
       border-radius: 0; }
+      @media only screen and (max-width: 414px) {
+        .register .needs-validation .form-btn .btn-already {
+          font-size: 12px;
+          line-height: 14px; } }
+      .register .needs-validation .form-btn .btn-already:hover {
+        background: #808080; }
     .register .needs-validation .form-btn .btn-sign-up {
+      box-shadow: none !important;
       font-size: 20px;
       line-height: 15px;
       height: 64px;
@@ -178,5 +224,19 @@ body {
       color: white;
       text-transform: uppercase;
       border-radius: 0; }
+      @media only screen and (max-width: 414px) {
+        .register .needs-validation .form-btn .btn-sign-up {
+          font-size: 14px;
+          line-height: 16px; }
+          .register .needs-validation .form-btn .btn-sign-up img {
+            width: 18px !important; } }
+      .register .needs-validation .form-btn .btn-sign-up img {
+        width: 25px; }
+      .register .needs-validation .form-btn .btn-sign-up:hover, .register .needs-validation .form-btn .btn-sign-up :focus {
+        background: #F4333D; }
+
+@media only screen and (max-width: 414px) {
+  footer {
+    display: none; } }
 
 /*# sourceMappingURL=register.css.map */

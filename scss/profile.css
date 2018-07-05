@@ -41,7 +41,7 @@ header {
   margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 34px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     header {
       padding-left: 20% !important;
       padding-right: 20% !important; } }
@@ -97,8 +97,12 @@ footer {
 body {
   max-width: 1440px;
   margin: 0 auto;
-  height: 1009.96px;
+  min-height: 1009.96px;
+  height: 100vh;
   position: relative; }
+  @media only screen and (max-width: 414px) {
+    body {
+      min-height: 100vh !important; } }
   body h1, body h2, body h3 {
     font-family: AvenirLTStd-Black; }
   body h4, body h5, body h6 {

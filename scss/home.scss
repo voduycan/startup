@@ -1,8 +1,8 @@
 @import "fonts";
 @import "variable";
-@import "mixin";
-@import "header";
-@import "footer";
+@import "button";
+@import "header-home";
+@import "footer-home";
 body{
     max-width: 1440px;
     margin: 0; 
@@ -67,7 +67,7 @@ body{
         .panel-title{
             font-family: AvenirLTStd-Black;
             color: $color-white;
-            font-size: $size-lg;
+            font-size: $size-40 + 20;
             line-height: 1.2em;
 
             span{
@@ -124,14 +124,14 @@ body{
         left: 3em;
         color: white;
         font-size: $size-24;
-        line-height: 28px;
+        line-height: $size-24 + 4;
         @media only screen and (max-width: 575px) {
             font-size: $size-12;
-            line-height: 14px;
+            line-height: $size-12 + 2;
             bottom: 19em;
         }
         @media only screen and (max-width: 1024px) {
-            left: 1em;
+            left: 1.5em;
         }
         @media only screen and (max-width: 320px) {
             bottom: 21em;
@@ -152,14 +152,7 @@ body{
                 padding-left: 1.5em;
             }
             .browse-investor{
-                padding-top: 0.9em !important;
                 padding-left: 0 !important;
-                form{
-                    width: 80px !important;
-                    select{
-                        width: 100% !important;
-                    }
-                }
             }
             .browse-funding{
                 padding: 1em;
@@ -169,8 +162,8 @@ body{
                 height: 56px;
                 .claim{
                     .claim-left{
-                        font-size: $size-14;
-                        line-height: 16px;
+                        font-size: $size-12 + 2;
+                        line-height: $size-12 + 4;
                         padding-top: 0.5em;
                         padding-left: 2em;
                         .br-claim{
@@ -214,29 +207,48 @@ body{
         .browse-investor{
             color: $color-footer;
             padding-top: 1.5em;
+            padding-left: 0;
             @media only screen and (max-width: 375px) {
                 padding-top: 1.5em !important;
             }
-            form{
-                select{
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    color: $color-a7a9ac;
-                    background-image: url('../img/svg/Shape.svg');
-                    background-size: 12px;
-                    background-position: calc(100% - 5px) center;
-                    background-repeat: no-repeat;
-                    border: none;
-                    border-bottom: 1px solid red;
-                    width: 120%;
-                    outline: 0;
+            
+            .select-investor{
+               
+                @media only screen and(max-width: 991px) {
+                    width: 160px;
                 }
+                @media only screen and(max-width: 768px) {
+                    width: 140px;
+                }
+                @media only screen and(max-width: 691px) {
+                    width: 120%;
+                }
+                @media only screen and(max-width: 575px) {
+                    width: 50%;
+                    
+                }
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                color: $color-a7a9ac;
+                background-image: url('../img/svg/Shape.svg');
+                background-size: 12px;
+                background-position: calc(100% - 5px) center;
+                background-repeat: no-repeat;
+                border: none;
+                border-bottom: 1px solid red;
+                width: 202px;
+                outline: 0;
             }
+           
         }
         .browse-funding{
+            
             @media only screen and (max-width: 768px) {
-                padding-left: 1.5em !important;
+                padding-left: 1.5em;
+            }
+            @media only screen and(max-width: 691px) {
+                padding-left: 0.5em;
             }
             padding-left: 2.5em;
             position: relative;
@@ -245,34 +257,48 @@ body{
             span{
                 position: absolute;
             }
-            form{
-                display: inline-block;
-                margin-left: 45px;
-               
-                select{
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    color: $color-a7a9ac;
-                    background-image: url('../img/svg/Shape.svg');
-                    background-size: 12px;
-                    background-position: calc(100% - 5px) center;
-                    background-repeat: no-repeat;
-                    border: none;
-                    border-bottom: 1px solid red;
-                    width: 140%;
-                    outline: 0;
-                    @media only screen and (max-width: 768px) and (min-width: 576px){
-                        width: 120% !important;
-                    }
+           
+            .select-box-funding{
+
+                @media only screen and(max-width: 1024px) {
+                    margin-left: 45px;
+                    
                 }
+                @media only screen and(max-width: 991px) {
+                    width: 160px;
+                }
+                @media only screen and(max-width: 768px) {
+                    width: 140px;
+                    margin-left: 35px;
+                }
+                
+                @media only screen and(max-width: 575px) {
+                    width: 60%;
+                    
+                }
+                display: inline-block;
+                margin-left: 70px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                color: $color-a7a9ac;
+                background-image: url('../img/svg/Shape.svg');
+                background-size: 12px;
+                background-position: calc(100% - 5px) center;
+                background-repeat: no-repeat;
+                border: none;
+                border-bottom: 1px solid red;
+                width: 202px;
+                outline: 0;
+                
             }
+           
         }
         .browse-btn{
             padding: 0;
            .claim{
             @include claim-btn;
-            font-size: $size-20 !important;
+            font-size: $size-24 - 4 !important;
             .claim-right{
                 img{
                     padding-top: 0 !important;
@@ -281,50 +307,7 @@ body{
             }
            }
         }
-        // .select-box{
-        //     @media only screen and (max-width:1023px) {
-        //         width: 145px !important;
-        //     }
-        //     width: 165px;
-        //     overflow: hidden;
-        //     border-bottom: 1px solid $color-red;
-        //     position: relative;
-        // }
-        // .select-box:after{
-        //     width: 0; 
-        //     height: 0; 
-        //     border-left: 6px solid transparent;
-        //     border-right: 6px solid transparent;
-        //     // border-top: 6px solid #f00;
-        //     position: absolute;
-        //     top: 25%;
-        //     right: -10px;
-        //     content: ">";
-        //     z-index: 98;
-        //     transform: rotate(90deg);
-        //     color: red;
-        //  }
-        // .select-box select{
-        //     @media only screen and (max-width:1023px) {
-        //         width: 150px !important;
-        //     }
-            
-        //     width: 165px;
-        //     border: 0;
-        //     position: relative;
-        //     z-index: 99;
-        //     background: none;    
-        //     -webkit-appearance: none;
-        //     -moz-appearance: none;
-        //     &::-ms-expand {
-        //         display: none;
-        //     }
-        // }
-        // .select-box .select-investor{
-        //     @media only screen and (max-width: 575px) {
-        //         width: 80px !important;
-        //     }
-        // }
+        
     }
 }
 
@@ -394,8 +377,8 @@ body{
                 margin-bottom: 0.5em;
             }
             @media only screen and (max-width: 375px) {
-                font-size: 32px;
-                line-height: 40px;
+                font-size: $size-40 - 8;
+                line-height: $size-40;
             }
         }
         p{
@@ -404,8 +387,8 @@ body{
             line-height: 1.35em;
             margin: 0;
             @media only screen and (max-width: 375px) {
-                font-size: $size-14;
-                line-height: 24px;
+                font-size: $size-12 + 2;
+                line-height: $size-12 + 28;
             }
         }
         .join{
@@ -419,8 +402,8 @@ body{
                 background: $color-red-hover;
             }
             @media only screen and (max-width: 375px) {
-                font-size: $size-14 !important;
-                line-height: 16px !important;
+                font-size: $size-12 + 2 !important;
+                line-height: $size-12 + 4 !important;
             }
             
         }
@@ -461,28 +444,28 @@ body{
         @media only screen and (max-width: 414px) {
             .tech-left{
                 text-align: left !important;
-                span{
+                .span-since{
                     font-size: $size-12 !important;
-                    line-height: 16px !important;
+                    line-height: $size-12 + 4 !important;
                 }
-                h1{
+                .span-price{
                     
-                    font-size: $size-36 !important;
-                    line-height: 40px !important;
+                    font-size: $size-40 - 4 !important;
+                    line-height: $size-40 !important;
                 }
                 p{
-                    font-size: $size-14 !important;
-                    line-height: 16px !important;
+                    font-size: $size-12 + 2 !important;
+                    line-height: $size-12 + 4 !important;
                 }
             }
             .tech-between{
                 p{
                     font-size: $size-16 !important;
-                    line-height: 19px !important;
+                    line-height: $size-16 + 3 !important;
                 }
                 h6{
                     font-size: $size-12 !important;
-                    line-height: 16px !important;
+                    line-height: $size-12 + 4 !important;
                 }
             }
             .tech-right{
@@ -500,8 +483,8 @@ body{
             line-height: 0.8em;
             border-right: 1px solid $color-red; 
             text-align: left;
-            span{
-                font-size: $size-20;
+            .span-since{
+                font-size: $size-24 - 4;
                 color: $color-808080;
                 letter-spacing: -0.5px;
                 line-height: 6px;
@@ -513,15 +496,16 @@ body{
                 }
 
             }
-            h1{
+            .span-price{
                 font-family: AvenirLTStd-Heavy;
-                font-size: $size-58;
-                line-height: 1em;
+                font-size: $size-40 + 18;
+                line-height: $size-40 + 36;
                 color: $color-red;
+                display: block;
             }
             p{
-                font-size: $size-20;
-                line-height: 23px;
+                font-size: $size-24 - 4;
+                line-height: $size-24 - 1;
                 margin-bottom: 0;
                 color: $color-383838;
                 text-transform: uppercase;
@@ -541,7 +525,7 @@ body{
             }
             h6{
                 font-size: $size-16;
-                line-height: 24px;
+                line-height: $size-16 + 8;
                 color: $color-383838;
             }
         }
@@ -554,8 +538,8 @@ body{
                 @media only screen and (max-width: 575px) {
                     text-align: center;
                     .claim-left{
-                        font-size: $size-14;
-                        line-height: 16px;
+                        font-size: $size-12 - 2;
+                        line-height: $size-12 + 4;
                         padding-top: 0.5em;
                     }
                 }
@@ -563,6 +547,7 @@ body{
                     text-align: center;
                 }
                 @include claim-btn;
+                width: 99.5%;
                 .claim-left{
                     @media only screen and (max-width: 575px) {
                         text-align: right;
@@ -596,13 +581,13 @@ body{
     margin-bottom: 2em;
     h1{
         @media only screen and (max-width: 414px) {
-            font-size: $size-32;
-            line-height: 27px;
+            font-size: $size-24 + 8;
+            line-height: $size-24 + 3;
             margin-bottom: 1em;
         }
         font-family: AvenirLTStd-Black;
         margin-top: 1em;
-        font-size: $size-lg;
+        font-size: $size-40 + 20;
         font-weight: 800;
         color: $color-red;
         span{
@@ -611,8 +596,8 @@ body{
     }
     h5{
         @media only screen and (max-width: 414px) {
-            font-size: $size-14;
-            line-height: 16px;
+            font-size: $size-12 + 2;
+            line-height: $size-12 + 4;
         }
         font-family: AvenirLTStd-Medium;
         text-transform: uppercase;
@@ -646,8 +631,8 @@ body{
     }
     @media only screen and (max-width: 414px){
             h2{
-                font-size: $size-32 !important;
-                line-height: 40px !important;
+                font-size: $size-40 -8 !important;
+                line-height: $size-40 !important;
                 .br-sector{
                     display: block !important;
                 }
@@ -677,7 +662,7 @@ body{
             }
             @media only screen and (max-width: 414px) {
                 font-size: $size-12;
-                line-height: 14px;
+                line-height: $size-12 + 2;
                 margin-right: 0;
                 margin-bottom: 0;
             }
@@ -698,7 +683,7 @@ body{
     }
     font-family: AvenirLTStd-Medium;
     padding: 3em;
-    background: $color-round;
+    background: $color-footer;
     h2{
         font-family: AvenirLTStd-Black;
         color: $color-white;
@@ -706,8 +691,8 @@ body{
         margin-bottom: 1em;
         font-size: $size-40;
         @media only screen and (max-width: 414px) {
-            font-size: $size-32;
-            line-height: 47px;
+            font-size: $size-40 - 8;
+            line-height: $size-40 + 7;
             text-align: left;
             margin-bottom: 0.5em;
             br{
@@ -740,29 +725,29 @@ body{
                         margin: 0;
                         color: $color-808080;
                         font-size: $size-24;
-                        line-height: $size-24+4;
+                        line-height: $size-24 + 4;
                         @media only screen and (max-width: 414px) {
                             font-size: $size-16;
-                            line-height: $size-16+3;
+                            line-height: $size-16 + 3;
                         }
                     }
                     p.apr{
                         font-size: $size-16;
-                        line-height: $size-16+3;
+                        line-height: $size-16 + 3;
                     }
                 }
                 .box-between{
                     padding-top: 0.5em;
                     padding-bottom: 0.5em;
                     p{
-                        font-size: $size-20;
-                        line-height: 23px;
+                        font-size: $size-24 - 4;
+                        line-height: $size-24 - 1;
                         color: $color-red;
                     }
                     small{
                         display: block;
                         font-size: $size-16;
-                        line-height: 19px;
+                        line-height: $size-16 + 3;
                         margin-top: 16px;
                         color: $color-383838;
                     }
@@ -789,15 +774,15 @@ body{
     padding-top: 5em;
     h2{
         @media only screen and (max-width: 414px) {
-            font-size: $size-32;
-            line-height: 67px;
+            font-size: $size-40 - 8;
+            line-height: $size-40 + 27;
             text-align: left;
             padding-left: 1em;
         }
         font-family: AvenirLTStd-Black;
         color: $color-white;
         font-size: $size-40;
-        line-height: 67px;
+        line-height: $size-40 + 27;
         text-transform: uppercase;
         margin-bottom: 0.8em;
         span{

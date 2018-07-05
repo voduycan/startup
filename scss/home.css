@@ -35,6 +35,8 @@
   font-family: AvenirLTStd-Roman;
   src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype"); }
 header {
+  padding-left: 3em;
+  padding-right: 3em;
   font-family: AvenirLTStd-Medium !important;
   height: 104px; }
   @media only screen and (max-width: 767px) {
@@ -43,13 +45,23 @@ header {
   @media only screen and (min-width: 1024px) {
     header {
       padding-top: 0.5em; } }
+  @media only screen and (max-width: 1024px) {
+    header {
+      padding-left: 1em;
+      padding-right: 1em; } }
+  @media only screen and (max-width: 575px) {
+    header {
+      padding-left: 0em;
+      padding-right: 0em; } }
   header #collapsibleNavId {
     background: white;
     z-index: 500; }
   header .navbar {
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
-    padding-top: 20px;
-    justify-content: center; }
+    padding-top: 12px;
+    justify-content: space-between; }
     @media only screen and (max-width: 767px) {
       header .navbar {
         justify-content: space-between;
@@ -192,9 +204,18 @@ footer {
     color: #979797; }
     footer ul li {
       margin-bottom: 0.5em; }
+      footer ul li a {
+        color: #979797; }
+        footer ul li a:hover {
+          text-decoration: none;
+          color: #F4333D; }
   footer .footer-end {
     padding-right: 0;
     text-align: right; }
+    footer .footer-end .ft-end-left {
+      padding-left: 0; }
+    footer .footer-end .ft-end-right {
+      padding-left: 5px; }
     footer .footer-end img {
       width: 90%;
       height: auto;
@@ -214,12 +235,22 @@ footer {
       padding-top: 1em; }
       footer .copy-right .cp-r-row .cp-r-1 .cp-r-btn {
         border-right: 1px solid #808080; }
+        footer .copy-right .cp-r-row .cp-r-1 .cp-r-btn a {
+          color: #A7A9AC; }
+          footer .copy-right .cp-r-row .cp-r-1 .cp-r-btn a:hover {
+            text-decoration: none;
+            color: #F4333D; }
       @media only screen and (max-width: 375px) {
         footer .copy-right .cp-r-row .cp-r-1 .cp-r-term {
           padding-right: 0; } }
       @media only screen and (max-width: 320px) {
         footer .copy-right .cp-r-row .cp-r-1 .cp-r-term {
           padding: 0; } }
+      footer .copy-right .cp-r-row .cp-r-1 .cp-r-term a {
+        color: #A7A9AC; }
+        footer .copy-right .cp-r-row .cp-r-1 .cp-r-term a:hover {
+          text-decoration: none;
+          color: #F4333D; }
       footer .copy-right .cp-r-row .cp-r-1 button {
         padding: 0;
         line-height: 0.5em;
@@ -358,7 +389,7 @@ body {
         bottom: 19em; } }
     @media only screen and (max-width: 1024px) {
       .section-panel .p-bottom {
-        left: 1em; } }
+        left: 1.5em; } }
     @media only screen and (max-width: 320px) {
       .section-panel .p-bottom {
         bottom: 21em; } }
@@ -386,12 +417,7 @@ body {
         .section-panel .browse .browse-looking {
           padding-left: 1.5em; }
         .section-panel .browse .browse-investor {
-          padding-top: 0.9em !important;
           padding-left: 0 !important; }
-          .section-panel .browse .browse-investor form {
-            width: 80px !important; }
-            .section-panel .browse .browse-investor form select {
-              width: 100% !important; }
         .section-panel .browse .browse-funding {
           padding: 1em;
           padding-left: 2em !important; }
@@ -422,11 +448,12 @@ body {
           padding-top: 1em !important; } }
     .section-panel .browse .browse-investor {
       color: #231F20;
-      padding-top: 1.5em; }
+      padding-top: 1.5em;
+      padding-left: 0; }
       @media only screen and (max-width: 375px) {
         .section-panel .browse .browse-investor {
           padding-top: 1.5em !important; } }
-      .section-panel .browse .browse-investor form select {
+      .section-panel .browse .browse-investor .select-investor {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -437,8 +464,20 @@ body {
         background-repeat: no-repeat;
         border: none;
         border-bottom: 1px solid red;
-        width: 120%;
+        width: 202px;
         outline: 0; }
+        @media only screen and (max-width: 991px) {
+          .section-panel .browse .browse-investor .select-investor {
+            width: 160px; } }
+        @media only screen and (max-width: 768px) {
+          .section-panel .browse .browse-investor .select-investor {
+            width: 140px; } }
+        @media only screen and (max-width: 691px) {
+          .section-panel .browse .browse-investor .select-investor {
+            width: 120%; } }
+        @media only screen and (max-width: 575px) {
+          .section-panel .browse .browse-investor .select-investor {
+            width: 50%; } }
     .section-panel .browse .browse-funding {
       padding-left: 2.5em;
       position: relative;
@@ -446,28 +485,40 @@ body {
       padding-top: 1.5em; }
       @media only screen and (max-width: 768px) {
         .section-panel .browse .browse-funding {
-          padding-left: 1.5em !important; } }
+          padding-left: 1.5em; } }
+      @media only screen and (max-width: 691px) {
+        .section-panel .browse .browse-funding {
+          padding-left: 0.5em; } }
       .section-panel .browse .browse-funding span {
         position: absolute; }
-      .section-panel .browse .browse-funding form {
+      .section-panel .browse .browse-funding .select-box-funding {
         display: inline-block;
-        margin-left: 45px; }
-        .section-panel .browse .browse-funding form select {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          color: #A7A9AC;
-          background-image: url("../img/svg/Shape.svg");
-          background-size: 12px;
-          background-position: calc(100% - 5px) center;
-          background-repeat: no-repeat;
-          border: none;
-          border-bottom: 1px solid red;
-          width: 140%;
-          outline: 0; }
-          @media only screen and (max-width: 768px) and (min-width: 576px) {
-            .section-panel .browse .browse-funding form select {
-              width: 120% !important; } }
+        margin-left: 70px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: #A7A9AC;
+        background-image: url("../img/svg/Shape.svg");
+        background-size: 12px;
+        background-position: calc(100% - 5px) center;
+        background-repeat: no-repeat;
+        border: none;
+        border-bottom: 1px solid red;
+        width: 202px;
+        outline: 0; }
+        @media only screen and (max-width: 1024px) {
+          .section-panel .browse .browse-funding .select-box-funding {
+            margin-left: 45px; } }
+        @media only screen and (max-width: 991px) {
+          .section-panel .browse .browse-funding .select-box-funding {
+            width: 160px; } }
+        @media only screen and (max-width: 768px) {
+          .section-panel .browse .browse-funding .select-box-funding {
+            width: 140px;
+            margin-left: 35px; } }
+        @media only screen and (max-width: 575px) {
+          .section-panel .browse .browse-funding .select-box-funding {
+            width: 60%; } }
     .section-panel .browse .browse-btn {
       padding: 0; }
       .section-panel .browse .browse-btn .claim {
@@ -563,7 +614,7 @@ body {
     @media only screen and (max-width: 375px) {
       .birdging .birdging-left p {
         font-size: 14px;
-        line-height: 24px; } }
+        line-height: 40px; } }
   .birdging .birdging-left .join {
     font-family: AvenirLTStd-Medium;
     margin-top: 2em;
@@ -614,10 +665,10 @@ body {
     @media only screen and (max-width: 414px) {
       .tech .row-tech .tech-left {
         text-align: left !important; }
-        .tech .row-tech .tech-left span {
+        .tech .row-tech .tech-left .span-since {
           font-size: 12px !important;
           line-height: 16px !important; }
-        .tech .row-tech .tech-left h1 {
+        .tech .row-tech .tech-left .span-price {
           font-size: 36px !important;
           line-height: 40px !important; }
         .tech .row-tech .tech-left p {
@@ -641,21 +692,22 @@ body {
       line-height: 0.8em;
       border-right: 1px solid #F4333D;
       text-align: left; }
-      .tech .row-tech .tech-left span {
+      .tech .row-tech .tech-left .span-since {
         font-size: 20px;
         color: #808080;
         letter-spacing: -0.5px;
         line-height: 6px; }
-        .tech .row-tech .tech-left span .br-tech {
+        .tech .row-tech .tech-left .span-since .br-tech {
           display: none; }
           @media only screen and (max-width: 414px) {
-            .tech .row-tech .tech-left span .br-tech {
+            .tech .row-tech .tech-left .span-since .br-tech {
               display: inline-block; } }
-      .tech .row-tech .tech-left h1 {
+      .tech .row-tech .tech-left .span-price {
         font-family: AvenirLTStd-Heavy;
         font-size: 58px;
-        line-height: 1em;
-        color: #F4333D; }
+        line-height: 76px;
+        color: #F4333D;
+        display: block; }
       .tech .row-tech .tech-left p {
         font-size: 20px;
         line-height: 23px;
@@ -691,12 +743,13 @@ body {
         width: 100%;
         border-radius: 0;
         background: #F4333D;
-        color: white; }
+        color: white;
+        width: 99.5%; }
         @media only screen and (max-width: 575px) {
           .tech .row-tech .tech-right .claim {
             text-align: center; }
             .tech .row-tech .tech-right .claim .claim-left {
-              font-size: 14px;
+              font-size: 10px;
               line-height: 16px;
               padding-top: 0.5em; } }
         @media only screen and (max-width: 375px) {
@@ -779,7 +832,7 @@ body {
       padding: 1em !important; } }
   @media only screen and (max-width: 414px) {
     .sector h2 {
-      font-size: 32px !important;
+      font-size: 40px -8 !important;
       line-height: 40px !important; }
       .sector h2 .br-sector {
         display: block !important; } }

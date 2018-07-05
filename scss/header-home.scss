@@ -1,5 +1,8 @@
+@import "variable";
 //header
 header{
+    padding-left: 3em;
+    padding-right: 3em;
     font-family: AvenirLTStd-Medium !important;
     height: 104px;
     @media only screen and (max-width: 767px) {
@@ -8,14 +11,24 @@ header{
     @media only screen and (min-width: 1024px) {
         padding-top: 0.5em;
     }
+    @media only screen and (max-width: 1024px) {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    @media only screen and (max-width: 575px) {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
     #collapsibleNavId{
         background: white;
         z-index: 500;
     }
     .navbar{
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
-        padding-top: 20px;
-        justify-content: center;
+        padding-top: 12px;
+        justify-content: space-between;;
         @media only screen and (max-width: 767px) {
             justify-content: space-between;
             height: 44px;
@@ -117,8 +130,8 @@ header{
                         font-family: AvenirLTStd-Medium !important;
                         width: 100px;
                         height: 43px;
-                        font-size: $size-14;
-                        line-height: 16px;
+                        font-size: $size-12 + 2;
+                        line-height: $size-12 + 4;
                         color: $color-white;
                         text-transform: uppercase;
                         border: none;

@@ -1,17 +1,20 @@
 @import "fonts";
 @import "variable";
-@import "header-profile";
-@import "footer-profile";
+@import "footer-header-sup";
 @import "reset";
+
+.red-color{
+    color: red;
+
+}
 
 //register
 .register{
     padding-left: 29%;
     padding-right: 29%;
     h3{
-        font-size: $size-36;
-        line-height: $size-36 + 6;
-        margin-bottom: 24px;
+        font-size: $size-40 - 4 ;
+        line-height: $size-40 + 2;
         font-family: AvenirLTStd-Black;
     }
     @media only screen and (max-width: 1023px) {
@@ -26,24 +29,43 @@
         h3{
             font-size: $size-24;
             line-height: 28px;
-            margin-top: -28px;
+            margin-top: 20px;
         }
     }
     color: $color-383838;
+    .was-validated .form-control:invalid ~ .input-label{
+        color: $color-red ;
+    }
+    .was-validated .form-control:valid ~ .input-label{
+        color: $color-383838 ;
+    }
     .needs-validation{
         .form-input{
-            div{
-                .was-validated .form-control:valid {
-                    border-color: red;
+            .my-group{
+                padding-left: 0;
+                padding-right: 0;
+                position: relative;
+                margin-top: 48px;
+                @media only screen and (max-width: 414px) {
+                    margin-top: 40px;
                 }
-                label{
-                    margin-top: 27px;
+                .input-label{
+                    position: absolute;
+                    top: -25px;
+                    @media only screen and (max-width: 414px) {
+                        font-size: $size-12 + 2;
+                        line-height: $size-12 + 6;
+                        top: -20px;
+                    }
                     font-size: $size-16;
                     line-height: $size-16 + 8;
                     font-family: AvenirLTStd-Medium;
-                    margin-bottom: 0;
                 }
                 input{
+                    @media only screen and (max-width: 414px) {
+                        font-size: $size-12 + 2;
+                        line-height: $size-12 + 4;
+                    }
                     border-radius: 0;
                     font-size: $size-16;
                     line-height: $size-16;
@@ -51,29 +73,78 @@
                     color: $color-808080;
                     height: 40px;
                 }
+                .invalid-feedback{
+                    span{
+                        img{
+                            margin-right: 5px;
+                            margin-left: 10px;
+                            margin-top: -3px;
+                        }
+                    }
+                }
             }
         }
         .form-btn{
+            @media only screen and(max-width: 414px) {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                margin-left: -16px;
+            }
             margin-top: 64px;
+            div{
+                padding-left: 0;
+                padding-right: 0;
+            }
+
             .btn-already{
-                font-size: $size-14;
-                line-height: $size-14 + 2;
+                @media only screen and (max-width: 414px) {
+                    font-size: $size-12;
+                    line-height: $size-12 + 2;
+                }
+                box-shadow: none !important;
+                font-size: $size-12 + 2;
+                line-height: $size-12 + 4;
                 height: 64px;
                 width: 100%;
                 background: $color-EFEFEF;
                 color: $color-383838;
                 border-radius: 0;
+                &:hover{
+                    background: $color-808080;
+                }
             }
             .btn-sign-up{
-                font-size: $size-20;
-                line-height: $size-20 - 5;
+                @media only screen and (max-width: 414px) {
+                    font-size: $size-12 + 2;
+                    line-height: $size-12 + 4;
+                    img{
+                        width: 18px !important;
+                    }
+                }
+                box-shadow: none !important;
+                font-size: $size-24 - 4;
+                line-height: $size-24 - 9;
                 height: 64px;
                 width: 100%;
                 background: $color-383838;
                 color: $color-white;
                 text-transform: uppercase;
                 border-radius: 0;
+                img{
+                    width: 25px;   
+                }
+                &:hover,:focus{
+                    background: $color-red;
+                }
             }
         }
+    }
+}
+
+//footer
+footer{
+    @media only screen and (max-width: 414px) {
+        display: none;
     }
 }
