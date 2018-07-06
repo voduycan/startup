@@ -1,23 +1,21 @@
 /*
-Error: Undefined variable: "$size-12".
-        on line 44 of D:/DC/startup/scss/footer-header-sup.scss
-        from line 2 of D:\DC\startup\scss\register.scss
+Error: Undefined variable: "$size-40".
+        on line 11 of D:\DC\startup\scss\register.scss
 
-39:         color: $color-383838 ;
-40:     }
-41:     .needs-validation{
-42:         .form-input{
-43:             .my-group{
-44:                 padding-left: 0;
-45:                 padding-right: 0;
-46:                 position: relative;
-47:                 margin-top: 48px;
-48:                 @media only screen and (max-width: 414px) {
-49:                     margin-top: 40px;
+6: //register
+7: .register{
+8:     padding-left: 29%;
+9:     padding-right: 29%;
+10:     h3{
+11:         font-size: $size-40 - 4 ;
+12:         line-height: $size-40 + 2;
+13:         font-family: AvenirLTStd-Black;
+14:     }
+15:     @media only screen and (max-width: 1023px) {
+16:         padding-left: 20% !important;
 
 Backtrace:
-D:/DC/startup/scss/footer-header-sup.scss:44
-D:\DC\startup\scss\register.scss:2
+D:\DC\startup\scss\register.scss:11
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/operation.rb:67:in `_perform'
@@ -40,13 +38,11 @@ C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `b
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -79,4 +75,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$size-12\".\A         on line 44 of D:/DC/startup/scss/footer-header-sup.scss\A         from line 2 of D:\DC\startup\scss\register.scss\A \A 39:         color: $color-383838 ;\A 40:     }\A 41:     .needs-validation{\A 42:         .form-input{\A 43:             .my-group{\A 44:                 padding-left: 0;\A 45:                 padding-right: 0;\A 46:                 position: relative;\A 47:                 margin-top: 48px;\A 48:                 @media only screen and (max-width: 414px) {\A 49:                     margin-top: 40px;"; }
+  content: "Error: Undefined variable: \"$size-40\".\A         on line 11 of D:\DC\startup\scss\register.scss\A \A 6: //register\A 7: .register{\A 8:     padding-left: 29%;\A 9:     padding-right: 29%;\A 10:     h3{\A 11:         font-size: $size-40 - 4 ;\A 12:         line-height: $size-40 + 2;\A 13:         font-family: AvenirLTStd-Black;\A 14:     }\A 15:     @media only screen and (max-width: 1023px) {\A 16:         padding-left: 20% !important;"; }
