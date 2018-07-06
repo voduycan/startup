@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="scss/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/company.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="header-sup">
+        <img src="./img/svg/StartupSG-Light.svg" alt="">
+    </header>
+    <section class="register">
+        <h3>Please Register To Continue</h3>
+        <form class="needs-validation" novalidate>
+            <div class="form-row form-input">
+                <div class="col-12 col-sm-12 my-group">
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="your first name" required>
+                    <label class="input-label" for="validationCustom01">First Name</label>
+                    <div class="invalid-feedback">
+                        <span><img src="./img/svg/Warning.svg" alt="">first Name is required</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 my-group">
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="your last name" required>
+                    <label class="input-label" for="validationCustom02">Last Name</label>
+                    <div class="invalid-feedback">
+                        <span><img src="./img/svg/Warning.svg" alt="">last name is required</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 my-group">
+                    <input type="email" class="form-control" id="validationCustom03" placeholder="your email" required>
+                    <label class="input-label" for="validationCustom03">Email</label>
+                    <div class="invalid-feedback">
+                        <span><img src="./img/svg/Warning.svg" alt="">email is required</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 my-group">
+                    <input type="password" class="form-control" id="password1" placeholder="your password" required>
+                    <label class="input-label" for="password">Password</label>
+                    <div class="invalid-feedback">
+                        <span><img src="./img/svg/Warning.svg" alt="">password is required</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 my-group">
+                    <input type="password" class="form-control" id="password2" placeholder="re-enter password" required>
+                    <label class="input-label" for="password2">Confirm Password</label>
+                    
+                    <div class="invalid-feedback">
+                        <span><img src="./img/svg/Warning.svg" alt="">passwords don’t match</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row form-btn">
+                <div class="col-6 col-sm-6">
+                    <button class="btn btn-already" type="button">Already have an account?</button>
+                </div>
+                <div class="col-6 col-sm-6">
+                    <button class="btn btn-sign-up" type="submit">Sign Up <img src="./img/svg/tail-right.svg" alt=""></button>
+                </div>
+            </form>
+       </section>   
+          
+
+    <footer class="footer-sup">
+        <div class="row">
+            <div class="col-12 col-sm-6 ft-left">
+                <img src="./img/svg/logo-footer.svg" alt="">
+                <span>An initiative by Enterprise Singapore</span>
+            </div>
+            <div class="col-12 col-sm-6 ft-right">
+                All rights reserved © 2018 StartupSG Network
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                //var labels = document.getElementsByClassName('input-label');
+                // Loop over them and prevent submission
+                
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        //var label = form.childNodes;
+                        //console.log(label);
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                           // label.classList.add('red-color');
+                        } //else {
+                            //label.classList.remove('red-color');
+                        //}
+                        form.classList.add('was-validated');
+                        // var myLabel = Array.prototype.filter.call(labels, function(label){
+                        //     //label.addEventListener('submit', function(label_event) {
+                        //         // if (label.checkValidity() === false) {
+                        //         //     label_event.preventDefault();
+                        //         //     label_event.stopPropagation();
+                        //         // } else
+                        //         if (label.checkValidity()) {
+                        //             label.classList.remove('red-color');
+                        //         } else{
+                        //             label.classList.add('red-color');
+                        //         }
+                                
+                        //     //},false);
+                        // });
+                           
+                       
+                      
+                        
+                    }, false);
+                });
+
+            }, false);
+        })();
+    </script>
+    <script lang="JavaScript">
+        // $(document).load(function(){
+        //     if($('#password1').val()===$('#password2').val()){
+        //         console.log('cc');
+
+        //     }
+        //     else console.log('bld');
+        // });
+    </script>
+  </body>
+</html>
