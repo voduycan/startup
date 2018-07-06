@@ -1,292 +1,82 @@
-@font-face {
-  font-family: AvenirLTStd-Black;
-  src: url("../fonts/AvenirLTStd-Black.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-BlackOblique;
-  src: url("../fonts/AvenirLTStd-BlackOblique.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-Book;
-  src: url("../fonts/AvenirLTStd-Book.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-BookOblique;
-  src: url("../fonts/AvenirLTStd-BookOblique.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-Heavy;
-  src: url("../fonts/AvenirLTStd-Heavy.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-HeavyOblique;
-  src: url("../fonts/AvenirLTStd-HeavyOblique.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-Light;
-  src: url("../fonts/AvenirLTStd-Light.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-LightOblique;
-  src: url("../fonts/AvenirLTStd-LightOblique.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-Medium;
-  src: url("../fonts/AvenirLTStd-Medium.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-MediumOblique;
-  src: url("../fonts/AvenirLTStd-MediumOblique.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-Oblique;
-  src: url("../fonts/AvenirLTStd-Oblique.otf") format("opentype"); }
-@font-face {
-  font-family: AvenirLTStd-Roman;
-  src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype"); }
-header {
-  padding-left: 29%;
-  padding-right: 29%;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 34px;
-  padding-bottom: 34px; }
-  @media only screen and (max-width: 1023px) {
-    header {
-      padding-left: 20% !important;
-      padding-right: 20% !important; } }
-  @media only screen and (max-width: 575px) {
-    header {
-      padding-left: 16px !important;
-      padding-right: 16px !important; } }
-  @media only screen and (max-width: 414px) {
-    header {
-      padding-top: 17px;
-      padding-bottom: 17px;
-      box-shadow: 0px 2px rgba(167, 169, 172, 0.2468); }
-      header img {
-        width: 78px !important; } }
-  header img {
-    width: 146px;
-    height: auto; }
+/*
+Error: Undefined variable: "$size-12".
+        on line 44 of D:/DC/startup/scss/footer-header-sup.scss
+        from line 2 of D:\DC\startup\scss\profile.scss
 
-footer {
-  position: absolute;
-  bottom: 0;
-  font-size: 10px;
-  line-height: 16px;
-  padding-top: 2em;
-  padding-left: 8%;
-  padding-right: 8%;
-  width: 100%;
-  height: 64px;
-  background: #231F20; }
-  @media only screen and (max-width: 575px) {
-    footer {
-      text-align: center;
-      padding-top: 1em !important; }
-      footer .ft-left {
-        margin-bottom: 8px; }
-        footer .ft-left img {
-          display: none; } }
-  footer .ft-left {
-    color: white; }
-    footer .ft-left img {
-      width: 94px;
-      height: auto; }
-    footer .ft-left span {
-      text-transform: uppercase; }
-  footer .ft-right {
-    text-transform: uppercase;
-    color: #808080;
-    text-align: right; }
-    @media only screen and (max-width: 575px) {
-      footer .ft-right {
-        text-align: center; } }
+39:     * { box-sizing: border-box; }
+40:     form{
+41:         width: 100%;
+42:         height: 64px;
+43:         @media only screen and (max-width: 414px) {
+44:             height: 40px !important;
+45:         }
+46:     }
+47:     .autocomplete {
+48:             /*the container must be positioned relative:*\/
+49:             position: relative;
 
-body {
-  max-width: 1440px;
-  margin: 0 auto;
-  min-height: 1009.96px;
-  height: 100vh;
-  position: relative; }
-  @media only screen and (max-width: 414px) {
-    body {
-      min-height: 100vh !important; } }
-  body h1, body h2, body h3 {
-    font-family: AvenirLTStd-Black; }
-  body h4, body h5, body h6 {
-    font-family: AvenirLTStd-Medium; }
-  body h1 {
-    font-size: 60px;
-    line-height: 64px; }
-  body h2 {
-    font-size: 40px;
-    line-height: 48px; }
-  body h3 {
-    font-size: 36px;
-    line-height: 48px; }
-  body h4 {
-    font-size: 20px;
-    line-height: 24px; }
-  body h5 {
-    font-size: 16px;
-    line-height: 24px; }
-  body h6 {
-    font-size: 14px;
-    line-height: 16px; }
-
-.enter {
-  padding-left: 29%;
-  padding-right: 29%;
-  color: #383838; }
-  @media only screen and (max-width: 1023px) {
-    .enter {
-      padding-left: 20% !important;
-      padding-right: 20% !important; } }
-  @media only screen and (max-width: 575px) {
-    .enter {
-      padding-left: 16px !important;
-      padding-right: 16px !important; } }
-  @media only screen and (max-width: 414px) {
-    .enter h3 {
-      font-size: 24px;
-      line-height: 28px;
-      margin-top: 20px; }
-    .enter h5 {
-      font-size: 14px;
-      line-height: 16px; }
-    .enter h6, .enter .h5-1 {
-      font-size: 12px;
-      line-height: 16px; } }
-  .enter .h5-1 {
-    margin-top: 1em;
-    margin-bottom: 40px; }
-  .enter h6 {
-    color: #979797; }
-  .enter * {
-    box-sizing: border-box; }
-  .enter form {
-    width: 100%;
-    height: 64px; }
-    @media only screen and (max-width: 414px) {
-      .enter form {
-        height: 40px !important; } }
-  .enter .autocomplete {
-    /*the container must be positioned relative:*/
-    position: relative;
-    display: inline-block;
-    width: 74%;
-    height: 100%; }
-  .enter input {
-    border: 1px solid transparent;
-    background-color: #f1f1f1;
-    padding: 10px;
-    font-size: 16px; }
-  .enter input[type=text] {
-    outline: 0;
-    font-family: AvenirLTStd-Light;
-    background-color: white;
-    width: 102%;
-    border: 1px solid #DADADA;
-    color: #383838;
-    font-size: 16px;
-    line-height: 19px;
-    height: 100%; }
-    @media only screen and (max-width: 414px) {
-      .enter input[type=text] {
-        font-size: 14px;
-        line-height: 16px;
-        border: 1px solid #383838; } }
-  .enter button[type=submit] {
-    background-color: #383838;
-    color: white;
-    width: 24%;
-    height: 100%;
-    border: 0;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 24px;
-    font-family: AvenirLTStd-Medium; }
-    @media only screen and (max-width: 414px) {
-      .enter button[type=submit] {
-        font-size: 14px;
-        line-height: 15px; } }
-    @media only screen and (max-width: 373px) {
-      .enter button[type=submit] {
-        font-size: 13px;
-        line-height: 14px; } }
-    .enter button[type=submit] img {
-      width: 25px;
-      height: auto; }
-      @media only screen and (max-width: 414px) {
-        .enter button[type=submit] img {
-          width: 18px !important; } }
-  .enter .autocomplete-items {
-    width: 102%;
-    position: absolute;
-    border: 1px solid #DADADA;
-    border-bottom: none;
-    border-top: none;
-    z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
-    top: 100%;
-    left: 0;
-    right: 0; }
-    @media only screen and (max-width: 414px) {
-      .enter .autocomplete-items {
-        width: 134%;
-        border: 0;
-        box-shadow: 0px 2px 5px 0px #DADADA; } }
-  .enter .autocomplete-items div {
-    position: relative;
-    background-image: url(../img/png/Rectangle.png);
-    background-repeat: no-repeat;
-    background-position: 10px;
-    background-size: 44px;
-    font-size: 16px;
-    line-height: 19px;
-    font-family: AvenirLTStd-Medium;
-    padding: 10px;
-    padding-left: 64px;
-    padding-right: 100px;
-    height: 64px;
-    cursor: pointer;
-    background-color: white;
-    border-bottom: 1px solid #DADADA; }
-    @media only screen and (max-width: 414px) {
-      .enter .autocomplete-items div {
-        font-size: 14px;
-        line-height: 15px;
-        background-size: 40px; } }
-    @media only screen and (max-width: 414px) {
-      .enter .autocomplete-items div {
-        border-bottom: 0; } }
-  .enter span {
-    position: absolute;
-    right: 10px;
-    top: 18%; }
-  .enter .autocomplete-items div:hover {
-    /*when hovering an item:*/
-    background-color: rgba(121, 108, 109, 0.1207); }
-  .enter .autocomplete-active {
-    /*when navigating through the items using the arrow keys:*/
-    background-color: rgba(121, 108, 109, 0.1207) !important; }
-  .enter #warning-error {
-    margin-top: 0.5em;
-    padding-left: 12px; }
-    .enter #warning-error .warning-left {
-      padding-right: 0; }
-      @media only screen and (max-width: 375px) {
-        .enter #warning-error .warning-left {
-          padding-left: 4px; } }
-      .enter #warning-error .warning-left img {
-        width: 13px;
-        height: 13px;
-        margin-top: -15px; }
-    .enter #warning-error .warning-right {
-      font-size: 12px;
-      line-height: 14px;
-      color: #F4333D; }
-      @media only screen and (min-width: 576px) {
-        .enter #warning-error .warning-right {
-          padding-left: 8px !important; } }
-      @media only screen and (max-width: 575px) {
-        .enter #warning-error .warning-right {
-          padding-left: 0px !important; } }
-      @media only screen and (max-width: 414px) {
-        .enter #warning-error .warning-right {
-          font-size: 11px;
-          line-height: 13px; } }
-
-/*# sourceMappingURL=profile.css.map */
+Backtrace:
+D:/DC/startup/scss/footer-header-sup.scss:44
+D:\DC\startup\scss\profile.scss:2
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/operation.rb:67:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$size-12\".\A         on line 44 of D:/DC/startup/scss/footer-header-sup.scss\A         from line 2 of D:\DC\startup\scss\profile.scss\A \A 39:     * { box-sizing: border-box; }\A 40:     form{\A 41:         width: 100%;\A 42:         height: 64px;\A 43:         @media only screen and (max-width: 414px) {\A 44:             height: 40px !important;\A 45:         }\A 46:     }\A 47:     .autocomplete {\A 48:             /*the container must be positioned relative:*/\A 49:             position: relative;"; }

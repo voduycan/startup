@@ -1,5 +1,5 @@
 /*
-Error: Undefined variable: "$size-10".
+Error: Undefined variable: "$size-12".
         on line 44 of D:\DC\startup\scss\footer-header-sup.scss
 
 39:             }
@@ -7,8 +7,8 @@ Error: Undefined variable: "$size-10".
 41:     }
 42:     position: absolute;
 43:     bottom: 0;
-44:     font-size: $size-10;
-45:     line-height: 16px;
+44:     font-size: $size-12 - 2;
+45:     line-height: $size-12 + 4;
 46:     padding-top: 2em;
 47:     padding-left: 8%;
 48:     padding-right: 8%;
@@ -17,6 +17,8 @@ Error: Undefined variable: "$size-10".
 Backtrace:
 D:\DC\startup\scss\footer-header-sup.scss:44
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/operation.rb:67:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -62,4 +64,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$size-10\".\A         on line 44 of D:\DC\startup\scss\footer-header-sup.scss\A \A 39:             }\A 40:         }\A 41:     }\A 42:     position: absolute;\A 43:     bottom: 0;\A 44:     font-size: $size-10;\A 45:     line-height: 16px;\A 46:     padding-top: 2em;\A 47:     padding-left: 8%;\A 48:     padding-right: 8%;\A 49:     width: 100%;"; }
+  content: "Error: Undefined variable: \"$size-12\".\A         on line 44 of D:\DC\startup\scss\footer-header-sup.scss\A \A 39:             }\A 40:         }\A 41:     }\A 42:     position: absolute;\A 43:     bottom: 0;\A 44:     font-size: $size-12 - 2;\A 45:     line-height: $size-12 + 4;\A 46:     padding-top: 2em;\A 47:     padding-left: 8%;\A 48:     padding-right: 8%;\A 49:     width: 100%;"; }

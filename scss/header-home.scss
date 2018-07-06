@@ -1,6 +1,10 @@
-@import "variable";
+
 //header
-header{
+.header-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-left: 3em;
     padding-right: 3em;
     font-family: AvenirLTStd-Medium !important;
@@ -8,9 +12,7 @@ header{
     @media only screen and (max-width: 767px) {
         height: 44px;
     }
-    @media only screen and (min-width: 1024px) {
-        padding-top: 0.5em;
-    }
+   
     @media only screen and (max-width: 1024px) {
         padding-left: 1em;
         padding-right: 1em;
@@ -27,8 +29,8 @@ header{
         padding-left: 0;
         padding-right: 0;
         width: 100%;
-        padding-top: 12px;
         justify-content: space-between;;
+        align-items: center;
         @media only screen and (max-width: 767px) {
             justify-content: space-between;
             height: 44px;
@@ -37,10 +39,6 @@ header{
 
         a{
             .logo{
-                margin-left: 0.5em;
-                @media only screen and (max-width: 1024px) {
-                    margin-left: 0.5em !important;
-                }
                 @media only screen and (max-width: 767px) {
                     width: 4em !important;
                 }
@@ -57,8 +55,14 @@ header{
         }
         #collapsibleNavId{
             flex-grow: 0;
+            width: 100%;
             ul{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+               @media only screen and (max-width: 767px) {
                 text-align: right;
+               }
                 .nav-form{
                     @media only screen and (max-width: 768px) {
                         margin-top: -5px !important;
@@ -109,47 +113,19 @@ header{
                     }
                     
                     a{
-                        @media only screen and (max-width: 768px) and (min-width: 767px) {
+                        @media only screen and (max-width: 768px) and (min-width: 768px) {
                             padding-left: 0 !important;
                             font-size: $size-12 !important;
                         }
 
                         font-size: $size-16;
-                        img{
-                            height: 1.7em;
-                            width: 1.7em;
-                        }
+                        
                     }
                     
-                    button{
-                       
-                        @media only screen and (max-width: 575px) {
-                            padding-right: 1em !important;
-                            text-align: right;
-                        }
-                        font-family: AvenirLTStd-Medium !important;
-                        width: 100px;
-                        height: 43px;
-                        font-size: $size-12 + 2;
-                        line-height: $size-12 + 4;
-                        color: $color-white;
-                        text-transform: uppercase;
-                        border: none;
-                        background: $color-red;
-                        border-radius: 2em;
-                        &:focus{
-                            outline: 0;
-                        }
-                        @media only screen and (min-width: 768px) {
-                            &:hover{
-                                background: $color-white;
-                                border: 1px solid $color-red;
-                                color: $color-red;
-                            }
-                        }
-                    }
                 }
                 .menu-row{
+                    display: flex;
+                    align-items: center;
                     @media only screen and (max-width: 767px) {
                         padding: 0 !important;
                     }                    
@@ -166,22 +142,66 @@ header{
                 }
                 .img-btn-row{
                     padding: 0;
-                    .img-btn{
-                    
-                        @media only screen and (max-width: 767px) {
-                            a{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .icon-stats-bars, .icon-user{
+                            @media only screen and (max-width: 767px) {
                                 display: none;
                             }
-                            button{
-                                background: none;
-                                color: $color-red;
-                                font-weight: 600;
-                                text-transform: capitalize;
+                            @media only screen and (max-width: 955px) and (min-width: 768px) {
+                                padding: 5px;
+                                font-size: $size-16;
+                            }
+                            font-size: 24px;
+                            border: 1px solid #F4333D;
+                            border-radius: 50%;
+                            padding: 7px;
+                            color: #383838;;
+                            &:hover{
+                                background: $color-red;
+                                color: $color-white;
                             }
                         }
+                        
                     }
-                    .img-btn-btn{
-                        padding: 0;
+                    .sign-up-btn{
+                        @media only screen and (max-width: 955px) and (min-width: 768px) {
+                            width: 75px;
+                            height: 35px;
+                        }
+                       text-decoration: none;
+                        border-radius: 29px;
+                        text-transform: uppercase;
+                        color: $color-white;
+                        background: $color-red;
+                        font-size: 14px;
+                        line-height: 16px;
+                        width: 100px;
+                        text-align: center;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:hover{
+                            border: 1px solid $color-red;
+                            background: $color-white;
+                            color: $color-red;
+                        }
+                        @media only screen and (max-width: 767px) {
+                            border: 0;
+                            background: 0;
+                            color: $color-red;
+                            text-align: right;
+                            padding-top: 0.6em;
+                            display: inline-block;
+                            text-transform: capitalize;
+                        }
                     }
                 }
             }

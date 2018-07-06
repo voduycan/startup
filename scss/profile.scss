@@ -1,5 +1,4 @@
-@import "fonts";
-@import "variable";
+
 @import "footer-header-sup";
 @import "reset";
 
@@ -19,12 +18,12 @@
             margin-top: 20px;
         }
         h5{
-            font-size: $size-14;
-            line-height: 16px;
+            font-size: $size-16 - 2;
+            line-height: $size-16;
         }
         h6, .h5-1{
             font-size: $size-12;
-            line-height: 16px;
+            line-height: $size-12 + 4;
         }
     }
     padding-left: 29%;
@@ -69,8 +68,8 @@
             line-height: $size-16+3;
             height: 100%;
             @media only screen and (max-width: 414px) {
-                font-size: $size-14;
-                line-height: $size-14+2;
+                font-size: $size-12 + 2;
+                line-height: $size-12 + 4;
                 border: 1px solid $color-383838;
             }
         }
@@ -81,16 +80,16 @@
             height: 100%;
             border: 0;
             text-transform: uppercase;
-            font-size: $size-20;
-            line-height: $size-20+4;
+            font-size: $size-24 - 4;
+            line-height: $size-24;
             font-family: AvenirLTStd-Medium;
             @media only screen and (max-width: 414px) {
-                font-size: $size-14;
-                line-height: $size-14+1;
+                font-size: $size-12 + 2;
+                line-height: $size-12 + 3;
             }
             @media only screen and (max-width: 373px) {
-                font-size: $size-13;
-                line-height: $size-13+1;
+                font-size: $size-12 + 1;
+                line-height: $size-12 + 2;
             }
             img{
                 @media only screen and (max-width: 414px) {
@@ -120,8 +119,8 @@
         }
         .autocomplete-items div {
             @media only screen and (max-width: 414px) {
-                font-size: $size-14;
-                line-height: $size-14+1;
+                font-size: $size-12 + 2;
+                line-height: $size-12 + 3;
                 background-size: 40px;
             }
             position: relative;
@@ -182,8 +181,8 @@
                 padding-left: 0px !important;
             }
             @media only screen and (max-width: 414px) {
-                font-size: $size-11;
-                line-height: $size-11+2;
+                font-size: $size-12 - 1;
+                line-height: $size-12 + 1;
             }
         }
         
