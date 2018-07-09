@@ -66,6 +66,10 @@
                     font-family: AvenirLTStd-Light;
                     color: $color-808080;
                     height: 40px;
+                    &:focus{
+                        box-shadow: none;
+                        border: 1px solid $color-383838;
+                    }
                 }
                 .invalid-feedback{
                     span{
@@ -79,7 +83,7 @@
             }
         }
         .form-btn{
-            @media only screen and(max-width: 414px) {
+            @media only screen and(max-width: 575px) {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -102,8 +106,8 @@
 }
 
 //footer
-footer{
-    @media only screen and (max-width: 414px) {
-        display: none;
+.footer-sup{
+    @media only screen and (max-width: 575px) {
+        display: none !important;
     }
 }

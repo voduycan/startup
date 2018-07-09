@@ -33,7 +33,7 @@
                 height: 66px;
             }
             height: 62px;
-            border: 1px solid rgba(167, 169, 172, 0.2468);
+            border-top: 1px solid rgba(167, 169, 172, 0.2468);
             padding-top: 2%;
             &:hover{
                 background: rgba(121, 108, 109, 0.1207);
@@ -64,15 +64,15 @@
                     font-size: $size-16 - 2;
                     line-height: $size-16;
                 }
-                padding: 0;
+                padding-left: 0;
                 font-size: $size-16;
                 line-height: $size-16 + 7;
-                text-align: center;
+                text-align: right;
             }
         }
     }
     .company-btn{
-        @media only screen and(max-width: 414px) {
+        @media only screen and(max-width: 575px) {
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -80,25 +80,48 @@
         }
         margin-top: 64px;
         div{
-            @media only screen and (max-width: 414px) {
+            @media only screen and (max-width: 575px) {
                 padding-left: 0;
                 padding-right: 0;
             }
             .btn-already{
                 @include have-account;
-                @media only screen and (min-width: 415px) {
+                span{
+                    text-transform: uppercase;
+                }
+                .above{
+                    display: none;
+                    @media only screen and (max-width: 575px) {
+                        display: block;
+                    }
+                }
+                .match{
+                    display: block;
+                    @media only screen and (max-width: 575px) {
+                        display: none;
+                    } 
+                }
+                @media only screen and (min-width: 576px) {
                     height: 40px;
                     border-radius: 30px;
+                    font-size: $size-16 - 2;
+                    line-height: $size-16;
+                    text-transform: uppercase;
+                    
                 }
+                
             
             }
             .btn-sign-up{
                 @include sign-up-mixin;
-                @media only screen and (min-width: 415px) {
+                @media only screen and (min-width: 576px) {
                     height: 40px;
                     border-radius: 30px;
+                    font-size: $size-16 - 2;
+                    line-height: $size-16;
+                    text-transform: uppercase;
                 }
-            
+                
             }
         }
     }

@@ -14,8 +14,8 @@
     }
    
     @media only screen and (max-width: 1024px) {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 0;
+        padding-right: 0;
     }
     @media only screen and (max-width: 575px) {
         padding-left: 0em;
@@ -40,7 +40,9 @@
         a{
             .logo{
                 @media only screen and (max-width: 767px) {
-                    width: 4em !important;
+                    width: 78px;
+                    margin-left: 16px;
+                    height: 30px;
                 }
 
             }
@@ -48,9 +50,23 @@
         .navbar-toggler {
             border: none;
             outline: none;
+            padding: 0;
+            @media only screen and (max-width: 767px) {
+                margin-right: 16px;
+            }
             .navbar-toggler-icon{
-                background-image: url('../img/svg/Vector.svg');
+                
                 height: 1em;
+                width: 16px;
+                height: 11px;
+                
+            }
+            #navbar-icon-1{
+                background-image: url('../img/svg/Vector.svg');
+            }
+            #navbar-icon-2{
+                background-image: url('../img/svg/Group3.svg');
+                display: none;
             }
         }
         #collapsibleNavId{
@@ -62,6 +78,7 @@
                 justify-content: space-evenly;
                @media only screen and (max-width: 767px) {
                 text-align: right;
+                margin: 0;
                }
                 .nav-form{
                     @media only screen and (max-width: 768px) {
@@ -132,8 +149,8 @@
                 }
                 .menu-item{
                     margin-top: 0.15em;
+                    padding: 0;
                     a{
-                        font-weight: 600;
                         color: $color-4a4a4a;
                         &:hover{
                             color: $color-red;
@@ -158,11 +175,11 @@
                                 padding: 5px;
                                 font-size: $size-16;
                             }
-                            font-size: 24px;
+                            font-size: 20px;
                             border: 1px solid #F4333D;
                             border-radius: 50%;
-                            padding: 7px;
-                            color: #383838;;
+                            padding: 10px;
+                            color: $color-red;
                             &:hover{
                                 background: $color-red;
                                 color: $color-white;
